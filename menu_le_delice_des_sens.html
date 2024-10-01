@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--lien googl font -->
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+ 
+   <!--lien font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Ohmyfood</title>
+</head>
+<body>
+
+    <!--header -->
+  
+
+    <header class="header"> <!--header avec icon retour vers index.html-->
+        <nav class="navbar">
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        </nav>
+        <img src="images/logo/ohmyfood@2x.svg" alt="Logo">
+    </header>
+    <!--menu-->
+    <main>
+        <section class="manu">
+        <!--baniere-->
+        <img class="menu__banner" src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+        </section>
+
+        <div class="menu__content">
+            <div class="menu__info">
+                <h1 class="menu__title">Le délice des sens</h1>
+                <button class="btn-like btn--mr"><i class="fa-regular fa-heart"></i></button>
+        </div>
+
+        <!-- Entrée -->
+        <div class="menu__plates">
+                    <h2 class="underline-title">Entrées</h2>
+                    <!-- Plates list -->
+                    <div class="plates__list">
+                        <a href="#" class="plate plate--1">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Tartare de thon</h3>
+                                <h4 class="plate__composition">Assaisonné au yuzu</h4>
+                            </div>
+                            <strong class="plate__price">25&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--2">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Bouchée de homard croustillant </h3>
+                                <h4 class="plate__composition">Et sa farandole de petits légumes</h4>
+                            </div>
+                            <strong class="plate__price">35&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--3">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Velouté de cèpes</h3>
+                                <h4 class="plate__composition">Aux truffes</h4>
+                            </div>
+                            <strong class="plate__price">20&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- plat -->
+                <div class="menu__plates">
+                    <h2 class="underline-title">Plats</h2>
+                    <!-- Plat list -->
+                    <div class="plates__list">
+                        <a href="#" class="plate plate--4">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Poulet rôti aux herbes de Provence </h3>
+                                <h4 class="plate__composition">Et sa crème de truffe</h4>
+                            </div>
+                            <strong class="plate__price">40&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--5">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Langouste rôtie </h3>
+                                <h4 class="plate__composition">Et ses légumes de saison</h4>
+                            </div>
+                            <strong class="plate__price">35&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--6">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Côte de bœuf Angus </h3>
+                                <h4 class="plate__composition">Et sa purée de panais</h4>
+                            </div>
+                            <strong class="plate__price">44&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu__plates">
+                    <h2 class="underline-title">Desserts</h2>
+                    <!-- Plates list -->
+                    <div class="plates__list">
+                        <a href="#" class="plate plate--7">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Farandole de desserts</h3>
+                                <h4 class="plate__composition">Du chef</h4>
+                            </div>
+                            <strong class="plate__price">18&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--8">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Crème brulée </h3>
+                                <h4 class="plate__composition">Revisitée</h4>
+                            </div>
+                            <strong class="plate__price">22&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                        <a href="#" class="plate plate--9">
+                            <div class="plate__info">
+                                <h3 class="plate__title">Tiramisu </h3>
+                                <h4 class="plate__composition">À la noisette</h4>
+                            </div>
+                            <strong class="plate__price">23&euro;</strong>
+                            <div class="plate__confirmation"><i class="fa-solid fa-circle-check"></i></div>
+                        </a>
+                    </div>
+                </div>
+            <!-- Order -->
+                  <div class="menu__order">
+                    <a href="#" class="btn btn--py">Commander</a>
+                </div>
+            </div>
+        </section>
+    </main>
+      <!--footer-->
+      <footer class="footer">
+        <h2 class="footer-title">ohmyfood</h2>
+        <ul class="footer__link">
+            <li><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><address><a href="#">Contact</a></address></li>
+        </ul>
+
+    </footer>
+
+    </body>

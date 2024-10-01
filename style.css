@@ -1,0 +1,384 @@
+/* CSS Mobile first */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #9356DC;    /* Couleur primaire */
+  --secondary-color: #FF79DA;  /* Couleur secondaire */
+  --tertiary-color: #99E2D0;   /* Couleur tertiaire */
+}
+body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {  /* texte en noir sans style */
+color: black; 
+text-decoration: none; 
+}
+
+/* Header mobile */
+.header {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center; /* Centrer le logo */
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.logo {
+  max-width: 150px; /* Taille du logo pour mobile */
+  height: auto;
+}
+
+/* Section restaurant */
+.restaurant {
+  padding: 0 0 50px; 
+  background-color: #F6F6F6;
+  text-align: center;
+}
+.restaurant__address { /*barre de recherche lieux */
+  background-color: #EAEAEA;
+  font-style: normal;
+  font-weight: 500;
+  padding: 16px; 
+  margin-bottom: 35px; 
+}
+.restaurant__address i { /*barre de recherche lieux icon */
+  background-color: #EAEAEA;
+  margin-right: 15px; 
+}
+.restaurant h1 {
+  font-size: 24px; 
+  font-weight: 700;
+  margin-bottom: 20px; 
+  padding: 0 40px; 
+}
+.restaurant__description {
+  font-size: 18px; 
+  font-weight: 300;
+  margin-bottom: 30px; 
+  padding: 0 20px; 
+}
+.btn { /*bouton*/
+  display: inline-block;
+  padding: 16px 24px;
+  border-radius: 32px; 
+  color: #FFF;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+}
+.btn:after { /*bouton effet*/
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 32px; 
+  background: linear-gradient(180deg, #ff88de 0%, #a16be0 100%);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+.btn:hover { /*bouton effet*/
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.btn:hover:after { /*bouton effet*/
+  opacity: 1;
+}
+
+/* Section étapes */
+.etape {
+  background-color: #F6F6F6;
+  padding: 25px 10px; 
+  margin-bottom: 20px; 
+  margin-left: 13px; 
+  border-radius: 24px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  margin-top: 16px; 
+  margin-bottom: 16px; 
+}
+.icon-mobil {
+  margin: 0 20px 0 26px; 
+  font-size: 20px; 
+  color: #7E7E7E;
+}
+
+.text-gras {
+  font-weight: 900;
+}
+
+.etape-1 {
+  background: #9356DC;
+  color: #FFF;
+  width: 26px; 
+  height: 26px;
+  line-height: 26px; 
+  border-radius: 50%;
+  font-size: 13px; 
+  text-align: center;
+  position: absolute;
+  left: -13px; 
+}
+
+.etape:hover {
+  background-color: #F5EDFF;
+}
+
+.step:hover i {
+  color: #9356DC;
+}
+
+/* Section cards */
+.cards {
+  background-color: #F6F6F6;
+}
+.card { /*  cards */
+  margin-top: 16px; 
+  margin-bottom: 16px; 
+  margin-left: 16px; 
+  margin-right: 16px; 
+  background-color: white;
+  position: relative;
+  border-radius: 16px; 
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  justify-content: normal;
+  flex-wrap: nowrap;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+.card__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 16px; 
+  border-top-right-radius: 16px; 
+}
+.card__body {
+  padding: 16px; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.card__title {
+  font-size: 18px; 
+  font-weight: 900;
+  margin-bottom: 5px; 
+}
+.card__lieux {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.card__new {
+  padding: 8px 12px;
+  background-color: #99E2D0;
+  color: #008766;
+  font-size: 14px; 
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajout pour le bouton coeur */
+.btn-like {
+  position: relative;
+  border: none;
+  background: transparent; 
+  padding: 10px; 
+  cursor: pointer; 
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+.btn-like:hover {
+  transform: scale(1.2); /* Effet de survol */
+ 
+}
+
+/* Footer */
+.footer-title { /* mettre la bonne police d'écriture et ajouter une margin */
+  font-family: "Shrikhand", cursive; 
+  margin-bottom: 20px; 
+}
+.footer { /* mettre un fond gris en mettant le texte en blanc et ajouter de l'espace */
+  background-color: #353535; 
+  padding: 20px; 
+  color: white; 
+  margin-top: -13px;
+}
+.footer__link { /* ajuster les liens des textes en mettant des espacements */
+  list-style: none; 
+  padding: 0;
+  margin: 0; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px; 
+}
+.footer__link li { /* enlever la marge des li */
+  margin: 0; 
+}
+.footer__link a { /* texte des liens en blanc */
+  color: white; 
+  text-decoration: none; 
+}
+.footer__link a:hover {
+  text-decoration: underline; 
+}
+
+
+
+/* Menu */
+.menu {
+  padding: 0;
+}
+.menu__banner {  /* ajuster l'image */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+.menu__content { /* fond gris avec les bordures en haut */
+  background-color: #F6F6F6;
+  border-top-left-radius: 40px; 
+  border-top-right-radius: 40px; 
+  margin-top: -40px; 
+  position: relative;
+  z-index: 2;
+}
+.menu__info { /* info du menu nom et coeur ajustement */
+  margin-bottom: 40px; /* 40px */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.menu__title { /* style de texte */
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+  font-size: 28px; 
+  margin-bottom: 0;
+  margin-left: 27px;
+}
+.menu__plates {
+  margin-bottom: 50px; 
+}
+.underline-title { /* style de texte souligné */
+  text-transform: uppercase;
+  margin-bottom: 20px; 
+  font-weight: 300;
+  font-size: 16px; 
+}
+.underline-title:after {  /* style de texte souligné */
+  background: #99E2D0;
+  bottom: -5px; 
+  content: "";
+  display: block;
+  height: 3px; 
+  position: relative;
+  width: 40px; 
+}
+.menu__plates {
+  margin-bottom: 50px; 
+}
+.menu__order {
+  text-align: center;
+  margin-bottom: 50px; 
+}
+.plate { /* mettre les plats en évidence avec un fond gris et des bordures */
+  padding: 12px; 
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px; 
+  animation: plate-appear 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.plate__info { /* ajuster les informations des plats */
+  white-space: nowrap;
+  overflow: hidden;
+  flex: 1;
+}
+
+
+.plate__composition { /* composition des plats texte pas en gras */
+  font-weight: 300;
+  font-size: 15px; 
+}
+.plate__price { /* mettre le prix en bas de la carte */
+  align-self: flex-end;
+  margin-left: 10px; 
+}
+.plate__confirmation {  /* animation bouton */
+  background-color: #99E2D0;
+  color: #FFF;
+  font-size: 20px; 
+  border-top-right-radius: 16px; 
+  border-bottom-right-radius: 16px; 
+  width: 56px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -12px -72px -12px 16px;
+  transition: margin-right 600ms ease;
+}
+.plate:hover {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.plate:hover .plate__confirmation {
+  margin-right: -0.75rem;
+}
+
+.btn--py { /* bouton tel adaptation */
+  padding-left: 50px; 
+  padding-right: 50px; 
+}
+
+@media only screen and (min-width: 768px) {
+  .restaurant { /* espacement avec la section explorer nos restaurant  */
+    margin-bottom: 25px;
+  }
+  .fonction{ /* h2 fonction aligner a ol */
+ margin-left: 31px;
+  }
+  ol {
+    display: flex; 
+    justify-content: center;
+    gap: 24px;
+    margin-top: 5px;
+    margin-bottom: 50px;
+ 
+  }
+ 
+  
+
+}
