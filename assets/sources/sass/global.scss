@@ -1,0 +1,19 @@
+@import "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: white;
+}
+
+button.btn {
+  padding: 10px;
+}
+
+footer {
+  background: $footer-background;
+}
