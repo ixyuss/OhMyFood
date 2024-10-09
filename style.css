@@ -1,4 +1,5 @@
-/* CSS Mobile first */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -203,6 +204,10 @@ text-decoration: none;
 .card:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
+
+
+
+
 
 /* Ajout pour le bouton coeur */
 .btn-like {
