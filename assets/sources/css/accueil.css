@@ -1,8 +1,19 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  height: 100%;
   font-family: "Roboto", sans-serif;
+}
+
+a { /* texte en noir sans style */
+  color: black;
+  text-decoration: none;
 }
 
 .header {
@@ -21,7 +32,7 @@
   height: auto;
 }
 
-.btn {
+.btn { /*bouton*/
   display: inline-block;
   padding: 16px 24px;
   border-radius: 32px;
@@ -31,7 +42,7 @@
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
-.btn:after {
+.btn .btn:after { /*bouton effet*/
   content: "";
   position: absolute;
   top: 0;
@@ -44,24 +55,46 @@
   z-index: -1;
   transition: opacity 0.3s ease;
 }
-.btn:hover {
+
+.btn:hover { /*bouton effet*/
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-.btn:hover:after {
+.btn:hover .btn:hover:after { /*bouton effet*/
   opacity: 1;
 }
 
-.footer {
+.btn-like {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  transition: trazznsform 0.3s ease;
+}
+
+.btn-like:hover {
+  transform: scale(1.2); /* Effet de survol */
+}
+
+/* Changer la couleur de l'icône au survol */
+.btn-like:hover .icon-heart {
+  color: #9356DC; /* Couleur violet */
+}
+
+.footer-title { /* mettre la bonne police d'écriture et ajouter une margin */
+  font-family: "Shrikhand", cursive;
+  margin-bottom: 20px;
+}
+
+.footer { /* mettre un fond gris en mettant le texte en blanc et ajouter de l'espace */
   background-color: #353535;
   padding: 20px;
   color: white;
   margin-top: -13px;
 }
-.footer .footer-title {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 20px;
-}
-.footer .footer__link {
+
+.footer__link { /* ajuster les liens des textes en mettant des espacements */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -69,45 +102,78 @@
   flex-direction: column;
   gap: 10px;
 }
-.footer .footer__link li {
+
+.footer__link li { /* enlever la marge des li */
   margin: 0;
 }
-.footer .footer__link a {
+
+.footer__link a { /* texte des liens en blanc */
   color: white;
   text-decoration: none;
 }
-.footer .footer__link a:hover {
+
+.footer__link a:hover {
   text-decoration: underline;
 }
 
-/*Section restaurant */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #9356DC; /* Couleur primaire */
+  --secondary-color: #FF79DA; /* Couleur secondaire */
+  --tertiary-color: #99E2D0; /* Couleur tertiaire */
+}
+
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+a { /* texte en noir sans style */
+  color: black;
+  text-decoration: none;
+}
+
+/* Header mobile */
+/* Section restaurant */
 .restaurant {
   padding: 0 0 50px;
   background-color: #F6F6F6;
   text-align: center;
 }
-.restaurant h1 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding: 0 40px;
-}
-.restaurant__address { /*barre de recherche lieux */
+.restaurant .restaurant__address { /*barre de recherche lieux */
   background-color: #EAEAEA;
   font-style: normal;
   font-weight: 500;
   padding: 16px;
   margin-bottom: 35px;
 }
-.restaurant__address i { /*barre de recherche lieux icon */
+.restaurant .restaurant__address i { /*barre de recherche lieux icon */
   background-color: #EAEAEA;
   margin-right: 15px;
 }
-.restaurant__description {
+.restaurant .restaurant h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 0 40px;
+}
+.restaurant .restaurant__description {
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 30px;
   padding: 0 20px;
+}
+
+.fonction {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 .etape { /*etape mobolefirst */
@@ -123,6 +189,9 @@
   justify-content: flex-start;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
+  width: 322.49px;
+  height: 72.38px;
+  left: 30px;
 }
 .etape:hover {
   background-color: #F5EDFF;
@@ -151,8 +220,23 @@
   color: #9356DC;
 }
 
+/* Section cards */
+.cards {
+  background-color: #F6F6F6;
+  margin-top: 70px;
+  padding-bottom: 55px; /*metre 55px despace evant le footer*/
+}
+
+.rs {
+  margin-left: 19px;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+
 .card {
-  margin: 16px;
+  margin-bottom: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
   background-color: white;
   position: relative;
   border-radius: 16px;
@@ -162,45 +246,27 @@
   justify-content: normal;
   flex-wrap: nowrap;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  color: rgb(0, 0, 0);
 }
-.card__img {
+.card .card__img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-.card__body {
-  padding: 16px;
+.card .card__body {
+  padding: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
 }
-.card a {
-  text-decoration: none;
-  color: black;
+.card .card__title {
   font-size: 18px;
   font-weight: 900;
   margin-bottom: 5px;
 }
-
-.btn-like {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.btn-like:hover {
-  transform: scale(1.2);
-  color: rgb(249, 0, 191);
-}
-
 .card .card__lieux {
   font-weight: 300;
   text-transform: capitalize;
@@ -217,6 +283,55 @@
 }
 .card .card:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1024px) {
+  .fonction {
+    margin-left: 90px;
+  }
+  .fonctionement ol {
+    display: flex; /* Aligne les étapes en ligne */
+    justify-content: center; /* Centre les étapes horizontalement */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    list-style: none; /* Supprime les puces de la liste */
+  }
+  .etape {
+    width: 280px; /* Largeur fixe */
+    height: 72.38px; /* Hauteur fixe */
+    margin: 10px; /* Espacement entre les étapes */
+    background-color: #F6F6F6; /* Couleur de fond */
+    padding: 15px; /* Padding pour le contenu */
+    border-radius: 24px; /* Coins arrondis */
+    display: flex; /* Garde le contenu en flex */
+    align-items: center; /* Centre verticalement */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
+    transition: background-color 0.3s ease; /* Transition pour hover */
+    font-size: 14px; /* Ajuste la taille de la police */
+  }
+}
+@media (max-width: 1024px) and (min-width: 376px) {
+  .fonctionement ol {
+    display: flex; /* Aligne les étapes en ligne */
+    justify-content: center; /* Centre les étapes horizontalement */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    list-style: none; /* Supprime les puces de la liste */
+    flex-wrap: wrap; /* Permet aux étapes de passer à la ligne si nécessaire */
+  }
+  .etape {
+    flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
+    height: 72.38px; /* Hauteur fixe */
+    margin: 10px; /* Espacement entre les étapes */
+    background-color: #F6F6F6; /* Couleur de fond */
+    padding: 10px; /* Réduit le padding pour les petits écrans */
+    border-radius: 24px; /* Coins arrondis */
+    display: flex; /* Garde le contenu en flex */
+    align-items: center; /* Centre verticalement */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombre légère */
+    transition: background-color 0.3s ease; /* Transition pour hover */
+    font-size: 12px; /* Ajuste la taille de la police pour les petits écrans */
+  }
 }
 
 /*# sourceMappingURL=accueil.css.map */
