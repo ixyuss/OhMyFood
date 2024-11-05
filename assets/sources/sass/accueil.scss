@@ -1,5 +1,6 @@
 
 @import "global";
+@import "loader";
 * {
   margin: 0;
   padding: 0;
@@ -108,6 +109,7 @@ text-decoration: none;
   background-color: #F6F6F6;
   margin-top: 70px;
   padding-bottom: 55px;/*metre 55px despace evant le footer*/
+  
 }
 
 .rs{
@@ -169,60 +171,89 @@ text-decoration: none;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
   }
   
+  
 }
 
+/* Pour les écrans larges, à partir de 1024px */
 @media (min-width: 1024px) {
   .fonction {
     margin-left: 90px;
   }
-  
+
+
   .fonctionement ol {
     display: flex; /* Aligne les étapes en ligne */
-    justify-content: center; /* Centre les étapes horizontalement */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    list-style: none; /* Supprime les puces de la liste */
+    justify-content: center; 
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
   }
 
   .etape {
-    width: 280px; /* Largeur fixe */
-    height: 72.38px; /* Hauteur fixe */
-    margin: 10px; /* Espacement entre les étapes */
-    background-color: #F6F6F6; /* Couleur de fond */
-    padding: 15px; /* Padding pour le contenu */
-    border-radius: 24px; /* Coins arrondis */
-    display: flex; /* Garde le contenu en flex */
-    align-items: center; /* Centre verticalement */
+    width: 280px;
+    height: 72.38px; 
+    margin: 10px;
+    background-color: #F6F6F6; 
+    padding: 15px; 
+    border-radius: 24px; 
+    display: flex; 
+    align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
-    transition: background-color 0.3s ease; /* Transition pour hover */
-    font-size: 14px; /* Ajuste la taille de la police */
+    transition: background-color 0.3s ease;
+    font-size: 14px; 
   }
+
+.rs{
+  margin-left: 24%;
+  height: 28px;
+}
+  .cards > div {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; /* Centre les cartes horizontalement */
+    max-width: 1080px; /* Limite la largeur totale des cartes */
+    margin: 0 auto; /* Centre le conteneur */
 }
 
+.card {
+    flex: 0 0 calc(50% - 100px); /* Deux cartes par ligne avec un espace de 100px */
+    margin: 25px 50px; /* Espace autour de chaque carte */
+    max-width: 4000px; /* Limite la largeur des cartes */
+    min-height: 1PX;
+    
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+}
+
+}
+
+/* Pour les écrans moyens, entre 376px et 1024px */
 @media (max-width: 1024px) and (min-width: 376px) {
+  
   .fonctionement ol {
-    display: flex; /* Aligne les étapes en ligne */
-    justify-content: center; /* Centre les étapes horizontalement */
-    padding: 0; /* Supprime le padding par défaut */
-    margin: 0; /* Supprime la marge par défaut */
-    list-style: none; /* Supprime les puces de la liste */
-    flex-wrap: wrap; /* Permet aux étapes de passer à la ligne si nécessaire */
+    display: flex; 
+    justify-content: center; 
+    padding: 0; 
+    margin: 0;  
+    list-style: none;  
+    flex-wrap: wrap; 
   }
 
   .etape {
     flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
-    height: 72.38px; /* Hauteur fixe */
+    height: 72.38px;
     margin: 10px; /* Espacement entre les étapes */
-    background-color: #F6F6F6; /* Couleur de fond */
-    padding: 10px; /* Réduit le padding pour les petits écrans */
-    border-radius: 24px; /* Coins arrondis */
-    display: flex; /* Garde le contenu en flex */
-    align-items: center; /* Centre verticalement */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Ombre légère */
-    transition: background-color 0.3s ease; /* Transition pour hover */
-    font-size: 12px; /* Ajuste la taille de la police pour les petits écrans */
+    background-color: #F6F6F6; 
+    padding: 10px; 
+    border-radius: 24px; 
+    display: flex; 
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+    transition: background-color 0.3s ease;
+    font-size: 12px; 
   }
 }
+
+
 
 
 

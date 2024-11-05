@@ -1,5 +1,5 @@
 @import "global";
-@import "loader";
+
 
 .navbar {
     position: absolute; /* Positionnement absolu */
@@ -55,6 +55,7 @@
     margin-bottom: 20px; 
     font-weight: 300;
     font-size: 16px; 
+    
   }
   .underline-title:after {  /* style de texte souligné */
     background: #99E2D0;
@@ -91,11 +92,16 @@
     overflow: hidden;
     flex: 1;
   }
-  
+  .plate__title{
+    overflow: hidden; 
+    text-overflow: ellipsis; // Ajoute les trois points 
+  }
   
   .plate__composition { /* composition des plats texte pas en gras */
     font-weight: 300;
     font-size: 15px; 
+    overflow: hidden; 
+   text-overflow: ellipsis; // Ajoute les trois points 
   }
   .plate__price { /* mettre le prix en bas de la carte */
     align-self: flex-end;

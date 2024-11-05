@@ -70,7 +70,7 @@ a { /* texte en noir sans style */
   padding: 10px;
   cursor: pointer;
   font-size: 30px;
-  transition: transform 0.3s ease;
+  transition: trazznsform 0.3s ease;
 }
 
 .btn-like:hover {
@@ -116,46 +116,6 @@ a { /* texte en noir sans style */
   text-decoration: underline;
 }
 
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-}
-.loader__circle {
-  width: 80px;
-  height: 80px;
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #9356DC;
-  border-radius: 50%;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-#loader {
-  animation: fadeOut 20s forwards;
-  animation-delay: 2s;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    pointer-events: none;
-  }
-}
 .navbar {
   position: absolute; /* Positionnement absolu */
   left: 30px; /* Écart de 40px à gauche */
@@ -256,9 +216,16 @@ a { /* texte en noir sans style */
   flex: 1;
 }
 
+.plate__title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .plate__composition { /* composition des plats texte pas en gras */
   font-weight: 300;
   font-size: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .plate__price { /* mettre le prix en bas de la carte */

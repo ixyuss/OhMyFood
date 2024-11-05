@@ -28,7 +28,7 @@
   }
 }
 #loader {
-  animation: fadeOut 2s forwards;
+  animation: fadeOut 20s forwards;
   animation-delay: 2s;
 }
 
