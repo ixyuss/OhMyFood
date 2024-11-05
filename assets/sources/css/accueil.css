@@ -16,6 +16,12 @@ a { /* texte en noir sans style */
   text-decoration: none;
 }
 
+.etape {
+  background-color: #F6F6F6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
+  transition: background-color 0.3s ease;
+}
+
 .header {
   position: relative;
   z-index: 1;
@@ -177,7 +183,6 @@ a { /* texte en noir sans style */
 }
 
 .etape { /*etape mobolefirst */
-  background-color: #F6F6F6;
   padding: 25px 10px;
   margin: 16px 0 20px 13px;
   border-radius: 24px;
@@ -187,8 +192,6 @@ a { /* texte en noir sans style */
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
   width: 322.49px;
   height: 72.38px;
   left: 30px;
@@ -298,20 +301,20 @@ a { /* texte en noir sans style */
     list-style: none;
   }
   .etape {
-    width: 280px;
+    width: 280px !important;
     height: 72.38px;
-    margin: 10px;
-    background-color: #F6F6F6;
+    margin: 30px;
     padding: 15px;
     border-radius: 24px;
     display: flex;
     align-items: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
-    transition: background-color 0.3s ease;
-    font-size: 14px;
+    justify-content: center;
+  }
+  .fonction {
+    margin-left: 45px;
   }
   .rs {
-    margin-left: 24%;
+    margin-left: 5%;
     height: 28px;
   }
   .cards > div {
@@ -328,21 +331,62 @@ a { /* texte en noir sans style */
     min-height: 1PX;
     box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
   }
+  .footer {
+    background-color: #353535;
+    padding: 20px;
+    color: white;
+    margin-top: -13px;
+    display: flex;
+    flex-direction: column; /* Garder la colonne pour mobile */
+    align-items: flex-start; /* Aligne tous les éléments à gauche */
+  }
+  .footer__link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer__link li {
+    margin: 0;
+  }
+  .footer__link a {
+    color: white;
+    text-decoration: none;
+  }
+  .footer__link a:hover {
+    text-decoration: underline;
+  }
+  .footer {
+    flex-direction: row; /* Change à row pour desktop */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+  }
+  .footer__link {
+    justify-content: flex-end; /* Aligne les liens à droite */
+    flex-direction: row; /* Garde les liens en ligne */
+    order: 1; /* Assure que les liens apparaissent avant le titre */
+  }
+  .footer-title {
+    margin-left: auto; /* Pousse le titre à gauche */
+    order: 2; /* Assure que le titre apparaît après les liens */
+  }
 }
 /* Pour les écrans moyens, entre 376px et 1024px */
 @media (max-width: 1024px) and (min-width: 376px) {
   .fonctionement ol {
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
+    padding: 1;
+    margin: 10;
     list-style: none;
     flex-wrap: wrap;
   }
   .etape {
     flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
     height: 72.38px;
-    margin: 10px; /* Espacement entre les étapes */
+    margin: 10px;
     background-color: #F6F6F6;
     padding: 10px;
     border-radius: 24px;
