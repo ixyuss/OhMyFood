@@ -55,7 +55,7 @@ text-decoration: none;
 }
 .fonction {
   margin-top: 40px;
-  margin-left: 20px; // Ajustez la valeur pour le décalage souhaité
+  margin-left: 20px !important; // Ajustez la valeur pour le décalage souhaité
   margin-bottom: 30px;
 }
 
@@ -72,7 +72,7 @@ text-decoration: none;
   justify-content: flex-start;
   width: 322.49px;
   height: 72.38px; 
-  left: 30px;
+  left: 13px;
   &:hover {
     background-color: #F5EDFF;
   }
@@ -105,7 +105,7 @@ text-decoration: none;
 /* Section cards */
 .cards {
   background-color: #F6F6F6;
-  margin-top: 70px;
+  margin-top: 47px;
   padding-bottom: 55px;/*metre 55px despace evant le footer*/
   
 }
@@ -132,7 +132,7 @@ text-decoration: none;
   
   .card__img {
     width: 100%;
-    height: 200px;
+    height: 152px;
     object-fit: cover;
     border-top-left-radius: 16px; 
     border-top-right-radius: 16px; 
@@ -175,106 +175,90 @@ text-decoration: none;
 /* Pour les écrans larges, à partir de 1024px */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 90px;
+    margin-left: 90px !important;
+    margin-bottom: -54px;
   }
-
 
   .fonctionement ol {
     display: flex; /* Aligne les étapes en ligne */
     justify-content: center; 
-    padding: 0; 
-    margin: 0; 
-    list-style: none; 
+    padding: 65px; 
+    margin: 10px;  
+    list-style: none;  
+    flex-wrap: wrap; 
   }
 
   .etape {
-   width: 280px !important;
+    width: 280px !important;
     height: 72.38px; 
-    margin: 30px ;
+    margin: 30px;
     padding: 15px; 
     border-radius: 24px; 
     display: flex; 
     align-items: center;
-    justify-content: center ;
-    
-
-}
-
-  .fonction{
-    margin-left: 45px;
+    justify-content: center;
   }
-.rs{
-  margin-left: 5%;
-  height: 28px;
-}
+
+  .rs {
+    margin-left: 7%;
+    height: 28px;
+  }
+
   .cards > div {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; /* Centre les cartes horizontalement */
     max-width: 1080px; /* Limite la largeur totale des cartes */
     margin: 0 auto; /* Centre le conteneur */
-}
+    margin-left: 14px;
+  }
 
-.card {
+  .card {
     flex: 0 0 calc(50% - 100px); /* Deux cartes par ligne avec un espace de 100px */
     margin: 25px 50px; /* Espace autour de chaque carte */
-    max-width: 4000px; /* Limite la largeur des cartes */
-    min-height: 1PX;
-    
+    max-width: 400px; /* Limite la largeur des cartes */
+    min-height: 1px;
     box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
-}
-.footer {
-  background-color: #353535; 
-  padding: 20px; 
-  color: white; 
-  margin-top: -13px;
-  display: flex; 
-  flex-direction: column; /* Garder la colonne pour mobile */
-  align-items: flex-start; /* Aligne tous les éléments à gauche */
-}
-
-.footer__link {
-  list-style: none; 
-  padding: 0;
-  margin: 0; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 10px; 
-}
-
-.footer__link li { 
-  margin: 0; 
-}
-
-.footer__link a { 
-  color: white; 
-  text-decoration: none; 
-}
-
-.footer__link a:hover {
-  text-decoration: underline; 
-}
-
-// Media query pour les écrans de 1024px et plus
-@media (min-width: 1024px) {
-  
   }
+
   .footer {
-      flex-direction: row; /* Change à row pour desktop */
-      justify-content: space-between; /* Espace entre les éléments */
-      align-items: center; /* Centrer verticalement les éléments */
+    background-color: #353535; 
+    padding: 20px; 
+    color: white; 
+    margin-top: -13px;
+    display: flex; 
+    flex-direction: row; /* Change à row pour desktop */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
   }
-  
+
   .footer__link {
-      justify-content: flex-end; /* Aligne les liens à droite */
-      flex-direction: row; /* Garde les liens en ligne */
-      
-      order: 1; /* Assure que les liens apparaissent avant le titre */
+    list-style: none; 
+    padding: 0;
+    margin: 0; 
+    display: flex; 
+    flex-direction: row; /* Garde les liens en ligne */
+    gap: 10px;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    order: 1; /* Assure que les liens apparaissent avant le titre */
+  }
+
+  .footer__link li { 
+    margin: 0; 
+  }
+
+  .footer__link a { 
+    color: white; 
+    text-decoration: none; 
+  }
+
+  .footer__link a:hover {
+    text-decoration: underline; 
   }
 
   .footer-title {
-      margin-left: auto; /* Pousse le titre à gauche */
-      order: 2; /* Assure que le titre apparaît après les liens */
+    margin-left: auto; /* Pousse le titre à gauche */
+    order: 2; /* Assure que le titre apparaît après les liens */
   }
 }
 
@@ -285,13 +269,15 @@ text-decoration: none;
   .fonctionement ol {
     display: flex; 
     justify-content: center; 
-    padding: 1; 
-    margin: 10;  
+    padding: 65px; 
+    margin: 10px;  
     list-style: none;  
     flex-wrap: wrap; 
     
   }
-
+.fonction{
+  top: 120px;
+}
   .etape {
     flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
     height: 72.38px;
@@ -307,7 +293,11 @@ text-decoration: none;
     
   }
   .footer__link{
- 
+ margin-left: 27%;
+  }
+  .footer-title{
+    
+    margin-top: 15px;
   }
 }
 
@@ -316,3 +306,4 @@ text-decoration: none;
 
 
 
+ 

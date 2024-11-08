@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
   text-decoration: none;
 }
 body {
@@ -115,4 +114,31 @@ text-decoration: none;
 }
 .footer__link a:hover {
   text-decoration: underline; 
+}
+
+.btn-like {
+  background: none; 
+  border: none;
+  cursor: pointer; 
+  font-size: 24px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease; 
+}
+
+.btn-like i {
+  transition: color 0.3s ease; 
+}
+
+.btn-like:hover i {
+  /* Effet de dégradé en fond avec des couleurs définies */
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  
+  
+  -webkit-background-clip: text; /* Applique le dégradé uniquement au texte */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
+
+  /* Application du poids de la police pour plus de contraste au survol */
+  font-weight: bold;
 }

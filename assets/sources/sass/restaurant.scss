@@ -111,8 +111,8 @@
     background-color: #99E2D0;
     color: #FFF;
     font-size: 20px; 
-    border-top-right-radius: 16px; 
-    border-bottom-right-radius: 16px; 
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 11px; 
     width: 56px; 
     display: flex;
     align-items: center;
@@ -130,5 +130,56 @@
   .btn--py { /* bouton tel adaptation */
     padding-left: 50px; 
     padding-right: 50px; 
+  }
+
+ 
+
+  @media (min-width: 1024px) {
+    .menu__content {
+      max-width: calc(120% - 460px); /* Espace de 240px de chaque côté pour encore plus réduire la largeur */
+      margin: -20px auto 0;
+      overflow: hidden;
+      margin-bottom: 13px;
+    }
+  
+    .menu__info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .menu__title {
+      margin-right: 10px;
+    }
+  
+    .plate {
+      overflow: hidden;
+      width: calc(75% - 65px); /* Réduit la largeur pour un espace de 60px de chaque côté */
+      height: auto; /* Permet à la hauteur de s'ajuster automatiquement */
+      margin: 20px auto; /* Ajoute un espace de 20px entre chaque plat */
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #fffefe; /* Optionnel : ajoute un fond clair pour démarquer chaque plat */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre légère */
+    }
+    .menu__title { /* style de texte */
+      font-family: "Shrikhand", cursive;
+      font-weight: normal;
+      font-size: 28px; 
+      margin-bottom: 0;
+      margin-left: 1px;
+    }
+    .underline-title{
+      margin-left: 15%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .plate {
+      width: calc(100% - 60px); /* Largeur réduite pour un espace de 30px de chaque côté */
+      height: auto;
+      margin: 10px auto; /* Espace de 10px entre chaque plat pour les écrans plus petits */
+    overflow: hidden;
+    }
   }
   

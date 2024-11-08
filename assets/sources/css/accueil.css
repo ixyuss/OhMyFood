@@ -122,6 +122,30 @@ a { /* texte en noir sans style */
   text-decoration: underline;
 }
 
+.btn-like {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.btn-like i {
+  transition: color 0.3s ease;
+}
+
+.btn-like:hover i {
+  /* Effet de dégradé en fond avec des couleurs définies */
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text; /* Applique le dégradé uniquement au texte */
+  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
+  /* Application du poids de la police pour plus de contraste au survol */
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -178,7 +202,7 @@ a { /* texte en noir sans style */
 
 .fonction {
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 20px !important;
   margin-bottom: 30px;
 }
 
@@ -194,7 +218,7 @@ a { /* texte en noir sans style */
   justify-content: flex-start;
   width: 322.49px;
   height: 72.38px;
-  left: 30px;
+  left: 13px;
 }
 .etape:hover {
   background-color: #F5EDFF;
@@ -226,7 +250,7 @@ a { /* texte en noir sans style */
 /* Section cards */
 .cards {
   background-color: #F6F6F6;
-  margin-top: 70px;
+  margin-top: 47px;
   padding-bottom: 55px; /*metre 55px despace evant le footer*/
 }
 
@@ -252,7 +276,7 @@ a { /* texte en noir sans style */
 }
 .card .card__img {
   width: 100%;
-  height: 200px;
+  height: 152px;
   object-fit: cover;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -291,14 +315,16 @@ a { /* texte en noir sans style */
 /* Pour les écrans larges, à partir de 1024px */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 90px;
+    margin-left: 90px !important;
+    margin-bottom: -54px;
   }
   .fonctionement ol {
     display: flex; /* Aligne les étapes en ligne */
     justify-content: center;
-    padding: 0;
-    margin: 0;
+    padding: 65px;
+    margin: 10px;
     list-style: none;
+    flex-wrap: wrap;
   }
   .etape {
     width: 280px !important;
@@ -310,11 +336,8 @@ a { /* texte en noir sans style */
     align-items: center;
     justify-content: center;
   }
-  .fonction {
-    margin-left: 45px;
-  }
   .rs {
-    margin-left: 5%;
+    margin-left: 7%;
     height: 28px;
   }
   .cards > div {
@@ -323,12 +346,13 @@ a { /* texte en noir sans style */
     justify-content: center; /* Centre les cartes horizontalement */
     max-width: 1080px; /* Limite la largeur totale des cartes */
     margin: 0 auto; /* Centre le conteneur */
+    margin-left: 14px;
   }
   .card {
     flex: 0 0 calc(50% - 100px); /* Deux cartes par ligne avec un espace de 100px */
     margin: 25px 50px; /* Espace autour de chaque carte */
-    max-width: 4000px; /* Limite la largeur des cartes */
-    min-height: 1PX;
+    max-width: 400px; /* Limite la largeur des cartes */
+    min-height: 1px;
     box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
   }
   .footer {
@@ -337,16 +361,19 @@ a { /* texte en noir sans style */
     color: white;
     margin-top: -13px;
     display: flex;
-    flex-direction: column; /* Garder la colonne pour mobile */
-    align-items: flex-start; /* Aligne tous les éléments à gauche */
+    flex-direction: row; /* Change à row pour desktop */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
   }
   .footer__link {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Garde les liens en ligne */
     gap: 10px;
+    justify-content: flex-end; /* Aligne les liens à droite */
+    order: 1; /* Assure que les liens apparaissent avant le titre */
   }
   .footer__link li {
     margin: 0;
@@ -358,16 +385,6 @@ a { /* texte en noir sans style */
   .footer__link a:hover {
     text-decoration: underline;
   }
-  .footer {
-    flex-direction: row; /* Change à row pour desktop */
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centrer verticalement les éléments */
-  }
-  .footer__link {
-    justify-content: flex-end; /* Aligne les liens à droite */
-    flex-direction: row; /* Garde les liens en ligne */
-    order: 1; /* Assure que les liens apparaissent avant le titre */
-  }
   .footer-title {
     margin-left: auto; /* Pousse le titre à gauche */
     order: 2; /* Assure que le titre apparaît après les liens */
@@ -378,10 +395,13 @@ a { /* texte en noir sans style */
   .fonctionement ol {
     display: flex;
     justify-content: center;
-    padding: 1;
-    margin: 10;
+    padding: 65px;
+    margin: 10px;
     list-style: none;
     flex-wrap: wrap;
+  }
+  .fonction {
+    top: 120px;
   }
   .etape {
     flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
@@ -395,6 +415,12 @@ a { /* texte en noir sans style */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease;
     font-size: 12px;
+  }
+  .footer__link {
+    margin-left: 27%;
+  }
+  .footer-title {
+    margin-top: 15px;
   }
 }
 
