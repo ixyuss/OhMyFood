@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,39 +7,56 @@
   text-decoration: none;
 }
 
+/* Font Awesome Icon */
+.fa-utensils {
+  padding: 0px 2px 0px 4px;
+}
+
 body {
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-a { /* texte en noir sans style */
+a {
   color: black;
   text-decoration: none;
 }
 
-.etape {
-  background-color: #F6F6F6;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
-  transition: background-color 0.3s ease;
-}
-
+/* Header */
 .header {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center; /* Centrer le logo */
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  /* Logo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .header .logo {
-  max-width: 150px; /* Taille du logo pour mobile */
+  max-width: 150px;
   height: auto;
 }
 
-.btn { /*bouton*/
+/* Restaurant Address */
+.restaurant__address input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* etape */
+.etape {
+  background-color: #F6F6F6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
+  transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
   display: inline-block;
   padding: 16px 24px;
   border-radius: 32px;
@@ -48,7 +66,7 @@ a { /* texte en noir sans style */
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
-.btn .btn:after { /*bouton effet*/
+.btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -61,11 +79,10 @@ a { /* texte en noir sans style */
   z-index: -1;
   transition: opacity 0.3s ease;
 }
-
-.btn:hover { /*bouton effet*/
+.btn:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-.btn:hover .btn:hover:after { /*bouton effet*/
+.btn:hover:after {
   opacity: 1;
 }
 
@@ -76,31 +93,54 @@ a { /* texte en noir sans style */
   padding: 10px;
   cursor: pointer;
   font-size: 30px;
-  transition: trazznsform 0.3s ease;
+  transition: transform 0.3s ease;
 }
-
 .btn-like:hover {
-  transform: scale(1.2); /* Effet de survol */
+  transform: scale(1.2);
 }
-
-/* Changer la couleur de l'icône au survol */
 .btn-like:hover .icon-heart {
-  color: #9356DC; /* Couleur violet */
+  color: #9356DC;
 }
 
-.footer-title { /* mettre la bonne police d'écriture et ajouter une margin */
+/* Icon Button */
+.btn-like i {
+  transition: color 0.3s ease;
+}
+
+.btn-like:hover i {
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition: background 2s ease, opacity 0.3s ease, background-size 2s ease;
+}
+
+/* Icon Mobil */
+.icon-mobil {
+  color: #9356DC;
+}
+.etape:hover .icon-mobil {
+  color: #FF79DA;
+}
+
+.etape:last-child .icon-mobil {
+  color: #9356DC;
+}
+
+/* Footer */
+.footer-title {
   font-family: "Shrikhand", cursive;
   margin-bottom: 20px;
 }
 
-.footer { /* mettre un fond gris en mettant le texte en blanc et ajouter de l'espace */
+.footer {
   background-color: #353535;
   padding: 20px;
   color: white;
   margin-top: -13px;
 }
 
-.footer__link { /* ajuster les liens des textes en mettant des espacements */
+.footer__link {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -108,44 +148,49 @@ a { /* texte en noir sans style */
   flex-direction: column;
   gap: 10px;
 }
-
-.footer__link li { /* enlever la marge des li */
+.footer__link li {
   margin: 0;
 }
-
-.footer__link a { /* texte des liens en blanc */
+.footer__link a {
   color: white;
   text-decoration: none;
 }
-
 .footer__link a:hover {
   text-decoration: underline;
 }
 
-.btn-like {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
+@media (min-width: 1024px) {
+  .footer {
+    background-color: #353535;
+    padding: 20px;
+    color: white;
+    margin-top: -13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: normal;
+  }
+  .footer__link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 77rem;
+    position: sticky;
+  }
+  .footer__link-item {
+    margin-right: 40px !important; /* Ajoute de l'espace avant "Devenir partenaire" */
+  }
+  .footer-title {
+    margin-top: 30px;
+    text-align: center;
+    order: 1;
+  }
 }
-
-.btn-like i {
-  transition: color 0.3s ease;
-}
-
-.btn-like:hover i {
-  /* Effet de dégradé en fond avec des couleurs définies */
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text; /* Applique le dégradé uniquement au texte */
-  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
-  /* Application du poids de la police pour plus de contraste au survol */
-  font-weight: bold;
-}
-
 .navbar {
   position: absolute; /* Positionnement absolu */
   left: 30px; /* Écart de 40px à gauche */
@@ -334,37 +379,5 @@ a { /* texte en noir sans style */
     overflow: hidden;
   }
 }
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.plate {
-  opacity: 0; /* Invisible par défaut */
-  animation: fade-in 2s ease forwards;
-}
-
-.plate:nth-child(1) {
-  animation-delay: 0.2s;
-}
-
-.plate:nth-child(2) {
-  animation-delay: 0.4s;
-}
-
-.plate:nth-child(3) {
-  animation-delay: 0.6s;
-}
-
-.plate:nth-child(4) {
-  animation-delay: 0.8s;
-}
-
-/* Ajoutez plus de nth-child si vous avez plus de plats */
 
 /*# sourceMappingURL=restaurant.css.map */

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -6,39 +7,56 @@
   text-decoration: none;
 }
 
+/* Font Awesome Icon */
+.fa-utensils {
+  padding: 0px 2px 0px 4px;
+}
+
 body {
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
 
-a { /* texte en noir sans style */
+a {
   color: black;
   text-decoration: none;
 }
 
-.etape {
-  background-color: #F6F6F6;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
-  transition: background-color 0.3s ease;
-}
-
+/* Header */
 .header {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 60px;
   display: flex;
-  justify-content: center; /* Centrer le logo */
+  justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  /* Logo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .header .logo {
-  max-width: 150px; /* Taille du logo pour mobile */
+  max-width: 150px;
   height: auto;
 }
 
-.btn { /*bouton*/
+/* Restaurant Address */
+.restaurant__address input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* etape */
+.etape {
+  background-color: #F6F6F6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
+  transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+.btn {
   display: inline-block;
   padding: 16px 24px;
   border-radius: 32px;
@@ -48,7 +66,7 @@ a { /* texte en noir sans style */
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
 }
-.btn .btn:after { /*bouton effet*/
+.btn:after {
   content: "";
   position: absolute;
   top: 0;
@@ -61,11 +79,10 @@ a { /* texte en noir sans style */
   z-index: -1;
   transition: opacity 0.3s ease;
 }
-
-.btn:hover { /*bouton effet*/
+.btn:hover {
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
-.btn:hover .btn:hover:after { /*bouton effet*/
+.btn:hover:after {
   opacity: 1;
 }
 
@@ -76,31 +93,54 @@ a { /* texte en noir sans style */
   padding: 10px;
   cursor: pointer;
   font-size: 30px;
-  transition: trazznsform 0.3s ease;
+  transition: transform 0.3s ease;
 }
-
 .btn-like:hover {
-  transform: scale(1.2); /* Effet de survol */
+  transform: scale(1.2);
 }
-
-/* Changer la couleur de l'icône au survol */
 .btn-like:hover .icon-heart {
-  color: #9356DC; /* Couleur violet */
+  color: #9356DC;
 }
 
-.footer-title { /* mettre la bonne police d'écriture et ajouter une margin */
+/* Icon Button */
+.btn-like i {
+  transition: color 0.3s ease;
+}
+
+.btn-like:hover i {
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  transition: background 2s ease, opacity 0.3s ease, background-size 2s ease;
+}
+
+/* Icon Mobil */
+.icon-mobil {
+  color: #9356DC;
+}
+.etape:hover .icon-mobil {
+  color: #FF79DA;
+}
+
+.etape:last-child .icon-mobil {
+  color: #9356DC;
+}
+
+/* Footer */
+.footer-title {
   font-family: "Shrikhand", cursive;
   margin-bottom: 20px;
 }
 
-.footer { /* mettre un fond gris en mettant le texte en blanc et ajouter de l'espace */
+.footer {
   background-color: #353535;
   padding: 20px;
   color: white;
   margin-top: -13px;
 }
 
-.footer__link { /* ajuster les liens des textes en mettant des espacements */
+.footer__link {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -108,44 +148,79 @@ a { /* texte en noir sans style */
   flex-direction: column;
   gap: 10px;
 }
-
-.footer__link li { /* enlever la marge des li */
+.footer__link li {
   margin: 0;
 }
-
-.footer__link a { /* texte des liens en blanc */
+.footer__link a {
   color: white;
   text-decoration: none;
 }
-
 .footer__link a:hover {
   text-decoration: underline;
 }
 
-.btn-like {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: color 0.3s ease;
+/* Responsive for tablet and desktop */
+@media (min-width: 768px) {
+  .footer__link {
+    flex-direction: row;
+    justify-content: flex-start; /* Aligner à gauche */
+    gap: 15px; /* Espacement réduit entre les liens */
+  }
 }
-
-.btn-like i {
-  transition: color 0.3s ease;
+@media (min-width: 1444px) {
+  .footer__link {
+    flex-direction: row;
+    justify-content: flex-start; /* Aligner à gauche */
+    gap: 20px; /* Espacement encore réduit entre les liens */
+    order: 1;
+    margin-left: 47%;
+    margin-top: -45px;
+    margin-bottom: 19px;
+  }
+  .footer-title {
+    order: 2;
+    margin-left: 87%;
+    margin-top: 12px;
+  }
+  .footer__link-fa {
+    margin-right: 50px !important;
+  }
 }
-
-.btn-like:hover i {
-  /* Effet de dégradé en fond avec des couleurs définies */
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  -webkit-background-clip: text; /* Applique le dégradé uniquement au texte */
-  -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
-  /* Application du poids de la police pour plus de contraste au survol */
-  font-weight: bold;
+/* Center content between 769px and 1440px */
+@media (max-width: 1440px) and (min-width: 769px) {
+  .footer__link,
+  .footer-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__link {
+    flex-direction: row;
+    gap: 20px; /* Adjust spacing as needed */
+  }
+  /* Adjust margin-top for OhMyFood section */
+  .footer__link-fa {
+    margin-top: -10px; /* Adjust this value to raise it higher */
+  }
 }
-
+/* Keep content centered between 1445px and 1625px */
+@media (max-width: 1625px) and (min-width: 1445px) {
+  .footer__link,
+  .footer-title {
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .footer__link {
+    flex-direction: row;
+    gap: 20px; /* Adjust spacing as needed */
+    margin-top: -12px;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -182,6 +257,7 @@ a { /* texte en noir sans style */
   font-weight: 500;
   padding: 16px;
   margin-bottom: 35px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 .restaurant .restaurant__address i { /*barre de recherche lieux icon */
   background-color: #EAEAEA;
@@ -282,7 +358,7 @@ a { /* texte en noir sans style */
   border-top-right-radius: 16px;
 }
 .card .card__body {
-  padding: 5px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -312,115 +388,125 @@ a { /* texte en noir sans style */
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Pour les écrans larges, à partir de 1024px */
+/* Styles pour écran de bureau (min-width: 1024px) */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 90px !important;
-    margin-bottom: -54px;
+    margin-left: 12.4% !important; /* Ajuste la marge de la fonction */
+    margin-bottom: -25px; /* Ajuste la marge du bas */
   }
   .fonctionement ol {
-    display: flex; /* Aligne les étapes en ligne */
+    display: flex;
     justify-content: center;
-    padding: 65px;
+    padding: 40px;
     margin: 10px;
     list-style: none;
-    flex-wrap: wrap;
   }
   .etape {
-    width: 280px !important;
-    height: 72.38px;
-    margin: 30px;
-    padding: 15px;
-    border-radius: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .rs {
-    margin-left: 7%;
-    height: 28px;
-  }
-  .cards > div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centre les cartes horizontalement */
-    max-width: 1080px; /* Limite la largeur totale des cartes */
-    margin: 0 auto; /* Centre le conteneur */
-    margin-left: 14px;
-  }
-  .card {
-    flex: 0 0 calc(50% - 100px); /* Deux cartes par ligne avec un espace de 100px */
-    margin: 25px 50px; /* Espace autour de chaque carte */
-    max-width: 400px; /* Limite la largeur des cartes */
-    min-height: 1px;
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
-  }
-  .footer {
-    background-color: #353535;
-    padding: 20px;
-    color: white;
-    margin-top: -13px;
-    display: flex;
-    flex-direction: row; /* Change à row pour desktop */
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centrer verticalement les éléments */
-  }
-  .footer__link {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row; /* Garde les liens en ligne */
-    gap: 10px;
-    justify-content: flex-end; /* Aligne les liens à droite */
-    order: 1; /* Assure que les liens apparaissent avant le titre */
-  }
-  .footer__link li {
-    margin: 0;
-  }
-  .footer__link a {
-    color: white;
-    text-decoration: none;
-  }
-  .footer__link a:hover {
-    text-decoration: underline;
-  }
-  .footer-title {
-    margin-left: auto; /* Pousse le titre à gauche */
-    order: 2; /* Assure que le titre apparaît après les liens */
-  }
-}
-/* Pour les écrans moyens, entre 376px et 1024px */
-@media (max-width: 1024px) and (min-width: 376px) {
-  .fonctionement ol {
-    display: flex;
-    justify-content: center;
-    padding: 65px;
-    margin: 10px;
-    list-style: none;
-    flex-wrap: wrap;
-  }
-  .fonction {
-    top: 120px;
-  }
-  .etape {
-    flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
-    height: 72.38px;
-    margin: 10px;
+    width: 385px !important;
+    height: 72.37px;
+    margin: 20px;
+    padding: 12px;
     background-color: #F6F6F6;
-    padding: 10px;
-    border-radius: 24px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease;
-    font-size: 12px;
+    font-size: 14px;
   }
-  .footer__link {
-    margin-left: 27%;
+  .rs {
+    margin-left: 12.4%;
+    height: 0px;
+    margin-top: -30px;
+    margin-bottom: 28px;
   }
-  .footer-title {
-    margin-top: 15px;
+  .cards > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2400px !important;
+    margin: 0 auto;
+  }
+  .card {
+    flex: 0 0 calc(40% - 65px); /* Ajuste la taille des cartes pour deux colonnes */
+    margin: 20px;
+    max-width: 900px !important;
+    min-height: 1px;
+    box-sizing: border-box;
+  }
+  .card__img {
+    width: 100%;
+    height: 230px !important;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonction {
+    margin-left: 3% !important;
+    margin-bottom: 10px;
+  }
+  .rs {
+    margin-left: 3%;
+  }
+  .etape {
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    max-width: none; /* Supprime la limite de largeur */
+    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
+    padding: 12px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    text-align: center;
+  }
+  .cards > div {
+    display: flex;
+    flex-direction: column; /* Les cartes en une colonne */
+    align-items: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Espace de 20px entre les cartes */
+  }
+  .card {
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    margin: 0 auto; /* Centrage horizontal */
+    max-width: none; /* Supprime la limite de largeur */
+  }
+  .card__img {
+    height: 200px !important; /* Hauteur pour l'affichage tablette */
+  }
+}
+@media (min-width: 377px) and (max-width: 767px) {
+  /* Ajustement des sections générales */
+  .fonction {
+    margin-left: 5%; /* Réduction de la marge pour écrans plus petits */
+    margin-bottom: 15px;
+  }
+  /* Style pour les étapes */
+  .etape {
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    max-width: none; /* Supprime toute limite de largeur */
+    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
+    padding: 10px; /* Ajustement pour réduire l'espace */
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
+    font-size: 13px; /* Taille de texte plus petite */
+    text-align: center;
+  }
+  /* Configuration des cartes */
+  .card__img {
+    height: 200px !important; /* Hauteur d'image ajustée pour écrans moyens */
+    width: 100%; /* Assure que l’image occupe toute la largeur de la carte */
+    object-fit: cover; /* Ajuste l'image pour éviter les déformations */
+  }
+  /* Autres éléments ou sections pour cet écran */
+  .footer {
+    padding: 15px;
+    text-align: center; /* Centrage du contenu pour mobile */
   }
 }
 

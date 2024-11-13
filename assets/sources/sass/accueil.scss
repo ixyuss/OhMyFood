@@ -34,6 +34,7 @@ text-decoration: none;
     font-weight: 500;
     padding: 16px; 
     margin-bottom: 35px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
   .restaurant__address i { /*barre de recherche lieux icon */
     background-color: #EAEAEA;
@@ -138,7 +139,7 @@ text-decoration: none;
     border-top-right-radius: 16px; 
   }
   .card__body {
-    padding: 5px; 
+    padding: 10px; 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -172,138 +173,140 @@ text-decoration: none;
   
 }
 
-/* Pour les écrans larges, à partir de 1024px */
+/* Styles pour écran de bureau (min-width: 1024px) */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 90px !important;
-    margin-bottom: -54px;
+    margin-left: 12.4% !important; /* Ajuste la marge de la fonction */
+    margin-bottom: -25px; /* Ajuste la marge du bas */
   }
 
   .fonctionement ol {
-    display: flex; /* Aligne les étapes en ligne */
-    justify-content: center; 
-    padding: 65px; 
-    margin: 10px;  
-    list-style: none;  
-    flex-wrap: wrap; 
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 10px;
+    list-style: none;
   }
 
   .etape {
-    width: 280px !important;
-    height: 72.38px; 
-    margin: 30px;
-    padding: 15px; 
-    border-radius: 24px; 
-    display: flex; 
+    width: 385px !important;
+    height: 72.37px;
+    margin: 20px;
+    padding: 12px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    font-size: 14px;
   }
 
   .rs {
-    margin-left: 7%;
-    height: 28px;
+    margin-left: 12.4%;
+    height: 0px;
+    margin-top: -30px;
+    margin-bottom: 28px;
   }
 
   .cards > div {
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; /* Centre les cartes horizontalement */
-    max-width: 1080px; /* Limite la largeur totale des cartes */
-    margin: 0 auto; /* Centre le conteneur */
-    margin-left: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 2400px !important;
+    margin: 0 auto;
   }
 
   .card {
-    flex: 0 0 calc(50% - 100px); /* Deux cartes par ligne avec un espace de 100px */
-    margin: 25px 50px; /* Espace autour de chaque carte */
-    max-width: 400px; /* Limite la largeur des cartes */
+    flex: 0 0 calc(40% - 65px); /* Ajuste la taille des cartes pour deux colonnes */
+    margin: 20px;
+    max-width: 900px !important;
     min-height: 1px;
-    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+    box-sizing: border-box;
   }
 
-  .footer {
-    background-color: #353535; 
-    padding: 20px; 
-    color: white; 
-    margin-top: -13px;
-    display: flex; 
-    flex-direction: row; /* Change à row pour desktop */
-    justify-content: space-between; /* Espace entre les éléments */
-    align-items: center; /* Centrer verticalement les éléments */
-  }
-
-  .footer__link {
-    list-style: none; 
-    padding: 0;
-    margin: 0; 
-    display: flex; 
-    flex-direction: row; /* Garde les liens en ligne */
-    gap: 10px;
-    justify-content: flex-end; /* Aligne les liens à droite */
-    order: 1; /* Assure que les liens apparaissent avant le titre */
-  }
-
-  .footer__link li { 
-    margin: 0; 
-  }
-
-  .footer__link a { 
-    color: white; 
-    text-decoration: none; 
-  }
-
-  .footer__link a:hover {
-    text-decoration: underline; 
-  }
-
-  .footer-title {
-    margin-left: auto; /* Pousse le titre à gauche */
-    order: 2; /* Assure que le titre apparaît après les liens */
+  .card__img {
+    width: 100%;
+    height: 230px !important;
+    object-fit: cover;
+    border-top-left-radius: 16px; 
+    border-top-right-radius: 16px; 
   }
 }
 
-
-/* Pour les écrans moyens, entre 376px et 1024px */
-@media (max-width: 1024px) and (min-width: 376px) {
-  
-  .fonctionement ol {
-    display: flex; 
-    justify-content: center; 
-    padding: 65px; 
-    margin: 10px;  
-    list-style: none;  
-    flex-wrap: wrap; 
-    
+@media (min-width: 768px) and (max-width: 1023px) {
+  .fonction {
+    margin-left: 3% !important;
+    margin-bottom: 10px;
   }
-.fonction{
-  top: 120px;
+.rs{
+  margin-left: 3%;
 }
   .etape {
-    flex: 1 1 30%; /* Chaque étape prend une largeur égale avec un minimum de 30% */
-    height: 72.38px;
-    margin:10px ;
-    background-color: #F6F6F6; 
-    padding: 10px  ; 
-    border-radius: 24px; 
-    display: flex; 
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    max-width: none; /* Supprime la limite de largeur */
+    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
+    padding: 12px;
+    background-color: #F6F6F6;
+    border-radius: 20px;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     transition: background-color 0.3s ease;
-    font-size: 12px; 
-    
+    font-size: 14px;
+    text-align: center;
   }
-  .footer__link{
- margin-left: 27%;
+
+  .cards > div {
+    display: flex;
+    flex-direction: column; /* Les cartes en une colonne */
+    align-items: center; /* Centre les cartes horizontalement */
+    gap: 20px; /* Espace de 20px entre les cartes */
   }
-  .footer-title{
-    
-    margin-top: 15px;
+
+  .card {
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    margin: 0 auto; /* Centrage horizontal */
+    max-width: none; /* Supprime la limite de largeur */
+  }
+
+  .card__img {
+    height: 200px !important; /* Hauteur pour l'affichage tablette */
+  }
+  
+}
+@media (min-width: 377px) and (max-width: 767px) {
+  /* Ajustement des sections générales */
+  .fonction {
+    margin-left: 5%; /* Réduction de la marge pour écrans plus petits */
+    margin-bottom: 15px;
+  }
+
+  /* Style pour les étapes */
+  .etape {
+    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
+    max-width: none; /* Supprime toute limite de largeur */
+    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
+    padding: 10px; /* Ajustement pour réduire l'espace */
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
+    font-size: 13px; /* Taille de texte plus petite */
+    text-align: center;
+  }
+
+  /* Configuration des cartes */
+
+  .card__img {
+    height: 200px !important; /* Hauteur d'image ajustée pour écrans moyens */
+    width: 100%; /* Assure que l’image occupe toute la largeur de la carte */
+    object-fit: cover; /* Ajuste l'image pour éviter les déformations */
+  }
+
+  /* Autres éléments ou sections pour cet écran */
+  .footer {
+    padding: 15px;
+    text-align: center; /* Centrage du contenu pour mobile */
   }
 }
 
-
-
-
-
-
- 

@@ -182,4 +182,39 @@
     overflow: hidden;
     }
   }
+  @media (min-width: 1024px){
+    .footer {
+      background-color: #353535;
+      padding: 20px;
+      color: white;
+      margin-top: -13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: normal;
+  }
   
+  .footer__link {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 19px;
+      margin-left: 66rem;
+      position: sticky;
+  }
+  
+  .footer__link-item {
+      margin-right: 40px !important; /* Ajoute de l'espace avant "Devenir partenaire" */
+  }
+  
+  .footer-title {
+      margin-top: 30px;
+      text-align: center;
+      order: 1;
+  }
+  
+  }
