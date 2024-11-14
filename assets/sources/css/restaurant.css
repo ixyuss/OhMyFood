@@ -4,22 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
+  text-decoration: none; /* Réinitialisation des marges, des bordures et de la décoration des liens */
 }
 
-/* Font Awesome Icon */
 .fa-utensils {
-  padding: 0px 2px 0px 4px;
+  padding: 0px 2px 0px 4px; /* Ajoute un petit espacement autour de l'icône */
 }
 
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif; /* Définit une police de caractères pour tout le corps */
 }
 
 a {
   color: black;
-  text-decoration: none;
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
 }
 
 /* Header */
@@ -31,11 +30,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Crée une ombre sous le header */
 }
-.header .logo {
+
+.logo {
   max-width: 150px;
-  height: auto;
+  height: auto; /* Redimensionne le logo sans déformer son ratio */
 }
 
 /* Restaurant Address */
@@ -45,14 +45,14 @@ a {
   background-color: transparent;
   color: #000;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 700; /* Style des champs de texte sans bordure et avec une taille de police spécifique */
 }
 
-/* etape */
+/* Etape */
 .etape {
   background-color: #F6F6F6;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre */
-  transition: background-color 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre autour des éléments */
+  transition: background-color 0.3s ease; /* Transition douce sur la couleur de fond */
 }
 
 /* Buttons */
@@ -63,8 +63,8 @@ a {
   color: #FFF;
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%); /* Fond en dégradé pour les boutons */
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2); /* Ombre portée sur les boutons */
 }
 .btn:after {
   content: "";
@@ -74,16 +74,16 @@ a {
   bottom: 0;
   left: 0;
   border-radius: 32px;
-  background: linear-gradient(180deg, #ff88de 0%, #a16be0 100%);
+  background: linear-gradient(180deg, #ff88de 0%, #a16be0 100%); /* Effet de fond en dégradé au survol */
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s ease;
 }
 .btn:hover {
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
 }
 .btn:hover:after {
-  opacity: 1;
+  opacity: 1; /* Affiche l'effet de survol */
 }
 
 .btn-like {
@@ -96,19 +96,19 @@ a {
   transition: transform 0.3s ease;
 }
 .btn-like:hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* Agrandissement au survol */
 }
 .btn-like:hover .icon-heart {
-  color: #9356DC;
+  color: #9356DC; /* Change la couleur de l'icône au survol */
 }
 
 /* Icon Button */
 .btn-like i {
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Transition douce sur la couleur de l'icône */
 }
 
 .btn-like:hover i {
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da); /* Effet de dégradé au survol sur l'icône */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;
@@ -117,27 +117,28 @@ a {
 
 /* Icon Mobil */
 .icon-mobil {
-  color: #9356DC;
+  color: #9356DC; /* Définit la couleur par défaut des icônes mobiles */
 }
+
 .etape:hover .icon-mobil {
-  color: #FF79DA;
+  color: #FF79DA; /* Change la couleur des icônes mobiles au survol de l'étape */
 }
 
 .etape:last-child .icon-mobil {
-  color: #9356DC;
+  color: #9356DC; /* Restaure la couleur par défaut sur le dernier élément */
 }
 
 /* Footer */
 .footer-title {
   font-family: "Shrikhand", cursive;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Applique une marge au bas du titre du footer */
 }
 
 .footer {
   background-color: #353535;
   padding: 20px;
   color: white;
-  margin-top: -13px;
+  margin-top: -13px; /* Ajoute un petit espacement négatif pour ajuster la position */
 }
 
 .footer__link {
@@ -146,7 +147,7 @@ a {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 10px; /* Espacement entre les éléments du footer */
 }
 .footer__link li {
   margin: 0;
@@ -156,45 +157,74 @@ a {
   text-decoration: none;
 }
 .footer__link a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Décoration de texte au survol des liens */
 }
 
-@media (min-width: 1024px) {
-  .footer {
-    background-color: #353535;
-    padding: 20px;
-    color: white;
-    margin-top: -13px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: normal;
-  }
+/* Responsive for tablet and desktop */
+@media (min-width: 768px) {
   .footer__link {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
     flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 20px;
-    margin-left: 77rem;
-    position: sticky;
+    justify-content: flex-start; /* Aligne les liens à gauche */
+    gap: 15px; /* Espacement réduit entre les liens */
   }
-  .footer__link-item {
-    margin-right: 40px !important; /* Ajoute de l'espace avant "Devenir partenaire" */
+}
+@media (min-width: 1444px) {
+  .footer__link {
+    flex-direction: row;
+    justify-content: flex-start; /* Aligne les liens à gauche */
+    gap: 20px; /* Espacement réduit entre les liens */
+    order: 1;
+    margin-left: 47%;
+    margin-top: -45px;
+    margin-bottom: 19px;
   }
   .footer-title {
-    margin-top: 30px;
-    text-align: center;
-    order: 1;
+    order: 2;
+    margin-left: 87%;
+    margin-top: 12px;
+  }
+  .footer__link-fa {
+    margin-right: 50px !important; /* Positionnement de certains éléments avec priorité */
+  }
+}
+/* Center content between 769px and 1440px */
+@media (max-width: 1440px) and (min-width: 769px) {
+  .footer__link,
+  .footer-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0; /* Centre le contenu entre 769px et 1440px */
+  }
+  .footer__link {
+    flex-direction: row;
+    gap: 20px; /* Espacement ajusté */
+  }
+  .footer__link-fa {
+    margin-top: -10px; /* Ajuste la position du footer */
+  }
+}
+/* Keep content centered between 1445px and 1625px */
+@media (max-width: 1625px) and (min-width: 1445px) {
+  .footer__link,
+  .footer-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0; /* Centrer le contenu dans cet intervalle de taille */
+  }
+  .footer__link {
+    flex-direction: row;
+    gap: 20px; /* Espacement ajusté entre les liens */
+    margin-top: -12px; /* Ajuste la position du footer */
   }
 }
 .navbar {
-  position: absolute; /* Positionnement absolu */
-  left: 30px; /* Écart de 40px à gauche */
-  top: 17%; /* Centrer verticalement */
+  position: absolute;
+  left: 30px;
+  top: 17%;
   font-size: 1.9em;
 }
 
@@ -206,7 +236,7 @@ a {
   padding: 0;
 }
 
-.menu__banner { /* ajuster l'image de banier */
+.menu__banner {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -214,7 +244,7 @@ a {
   z-index: 1;
 }
 
-.menu__content { /* fond gris avec les bordures en haut */
+.menu__content {
   background-color: #F6F6F6;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -224,8 +254,8 @@ a {
   z-index: 2;
 }
 
-.menu__info { /* info du menu nom et coeur ajustement */
-  margin-bottom: 40px; /* 40px */
+.menu__info {
+  margin-bottom: 40px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -233,7 +263,7 @@ a {
   flex-wrap: nowrap;
 }
 
-.menu__title { /* style de texte */
+.menu__title {
   font-family: "Shrikhand", cursive;
   font-weight: normal;
   font-size: 28px;
@@ -245,14 +275,15 @@ a {
   margin-bottom: 50px;
 }
 
-.underline-title { /* style de texte souligné */
+.underline-title {
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 300;
   font-size: 16px;
+  margin-left: 13px;
 }
 
-.underline-title:after { /* style de texte souligné */
+.underline-title:after {
   background: #99E2D0;
   bottom: -5px;
   content: "";
@@ -262,16 +293,12 @@ a {
   width: 40px;
 }
 
-.menu__plates {
-  margin-bottom: 50px;
-}
-
 .menu__order {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.plate { /* mettre les plats en évidence avec un fond gris et des bordures */
+.plate {
   padding: 12px;
   background: #ffffff;
   border-radius: 16px;
@@ -285,7 +312,7 @@ a {
   flex-wrap: nowrap;
 }
 
-.plate__info { /* ajuster les informations des plats */
+.plate__info {
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
@@ -296,19 +323,19 @@ a {
   text-overflow: ellipsis;
 }
 
-.plate__composition { /* composition des plats texte pas en gras */
+.plate__composition {
   font-weight: 300;
   font-size: 15px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.plate__price { /* mettre le prix en bas de la carte */
+.plate__price {
   align-self: flex-end;
   margin-left: 10px;
 }
 
-.plate__confirmation { /* animation bouton */
+.plate__confirmation {
   background-color: #99E2D0;
   color: #FFF;
   font-size: 20px;
@@ -330,14 +357,20 @@ a {
   margin-right: -0.75rem;
 }
 
-.btn--py { /* bouton tel adaptation */
+.btn--py {
   padding-left: 50px;
   padding-right: 50px;
 }
 
+.fa-regular, .far {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  margin-right: 31px;
+}
+
 @media (min-width: 1024px) {
   .menu__content {
-    max-width: calc(120% - 460px); /* Espace de 240px de chaque côté pour encore plus réduire la largeur */
+    max-width: calc(120% - 460px);
     margin: -20px auto 0;
     overflow: hidden;
     margin-bottom: 13px;
@@ -352,15 +385,15 @@ a {
   }
   .plate {
     overflow: hidden;
-    width: calc(75% - 65px); /* Réduit la largeur pour un espace de 60px de chaque côté */
-    height: auto; /* Permet à la hauteur de s'ajuster automatiquement */
-    margin: 20px auto; /* Ajoute un espace de 20px entre chaque plat */
+    width: calc(75% - 65px);
+    height: auto;
+    margin: 20px auto;
     padding: 15px;
     border-radius: 8px;
-    background-color: #fffefe; /* Optionnel : ajoute un fond clair pour démarquer chaque plat */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre légère */
+    background-color: #fffefe;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
-  .menu__title { /* style de texte */
+  .menu__title {
     font-family: "Shrikhand", cursive;
     font-weight: normal;
     font-size: 28px;
@@ -373,11 +406,106 @@ a {
 }
 @media (max-width: 1024px) {
   .plate {
-    width: calc(100% - 60px); /* Largeur réduite pour un espace de 30px de chaque côté */
+    width: calc(100% - 60px);
     height: auto;
-    margin: 10px auto; /* Espace de 10px entre chaque plat pour les écrans plus petits */
+    margin: 10px auto;
     overflow: hidden;
   }
+}
+@media (min-width: 377px) and (max-width: 1023px) {
+  .navbar {
+    left: 20px;
+    font-size: 1.5em;
+  }
+  .menu__banner {
+    height: 250px;
+  }
+  .menu__content {
+    margin-top: -50px;
+    padding: 1rem;
+  }
+  .menu__title {
+    font-size: 24px;
+    margin-left: 40%;
+  }
+  .underline-title {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+  .plate {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 8px;
+  }
+  .plate__confirmation {
+    font-size: 18px;
+    width: 50px;
+  }
+}
+@media (min-width: 377px) and (max-width: 1023px) {
+  .menu__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .menu__title {
+    font-size: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .btn-like {
+    margin-left: 15px;
+  }
+}
+@keyframes scrollPlates {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.plate {
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  animation: scrollPlates 0.6s ease-out forwards;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  opacity: 0;
+}
+
+.plate:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.plate:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.plate:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.plate:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.plate:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.plate:nth-child(6) {
+  animation-delay: 1.2s;
 }
 
 /*# sourceMappingURL=restaurant.css.map */

@@ -1,84 +1,98 @@
 @import "global";
 
-
+// Navbar positionnement
 .navbar {
-    position: absolute; /* Positionnement absolu */
-    left: 30px; /* Écart de 40px à gauche */
-    top: 17%; /* Centrer verticalement */
+    position: absolute;
+    left: 30px;
+    top: 17%;
     font-size: 1.9em;
 }
-.header .navbar a i {
-    color: #808080 !important; // Force l'icône à être grise
-  }
 
-  .menu {
+// Icône de la navbar en gris
+.header .navbar a i {
+    color: #808080 !important;
+}
+
+// Suppression des marges du menu
+.menu {
     padding: 0;
-  }
-  .menu__banner {  /* ajuster l'image de banier */
+}
+
+// Bannière du menu
+.menu__banner {
     width: 100%;
     height: 300px;
     object-fit: cover;
     position: relative;
     z-index: 1;
-  }
-  .menu__content { /* fond gris avec les bordures en haut */
+}
+
+// Contenu du menu avec bordures
+.menu__content {
     background-color: #F6F6F6;
-    border-top-left-radius: 40px; 
-    border-top-right-radius: 40px; 
-    margin-top: -90px; 
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -90px;
     padding-bottom: 1vh;
     position: relative;
     z-index: 2;
-    
-  }
-  .menu__info { /* info du menu nom et coeur ajustement */
-    margin-bottom: 40px; /* 40px */
+}
+
+// Informations du menu
+.menu__info {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    
-  }
-  .menu__title { /* style de texte */
+}
+
+// Titre du menu
+.menu__title {
     font-family: "Shrikhand", cursive;
     font-weight: normal;
-    font-size: 28px; 
+    font-size: 28px;
     margin-bottom: 0;
     margin-left: 27px;
-  }
-  .menu__plates {
-    margin-bottom: 50px; 
-  }
-  .underline-title { /* style de texte souligné */
+}
+
+// Plats du menu
+.menu__plates {
+    margin-bottom: 50px;
+}
+
+// Titre souligné du menu
+.underline-title {
     text-transform: uppercase;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     font-weight: 300;
-    font-size: 16px; 
-    
-  }
-  .underline-title:after {  /* style de texte souligné */
+    font-size: 16px;
+    margin-left: 13px;
+}
+
+.underline-title:after {
     background: #99E2D0;
-    bottom: -5px; 
+    bottom: -5px;
     content: "";
     display: block;
-    height: 3px; 
+    height: 3px;
     position: relative;
-    width: 40px; 
-  }
-  .menu__plates {
-    margin-bottom: 50px; 
-   
-  }
-  .menu__order {
+    width: 40px;
+}
+
+// Commande du menu
+.menu__order {
     text-align: center;
-    margin-bottom: 50px; 
-  }
-  .plate { /* mettre les plats en évidence avec un fond gris et des bordures */
-    padding: 12px; 
+    margin-bottom: 50px;
+}
+
+// Style des plats
+.plate {
+    padding: 12px;
     background: #ffffff;
     border-radius: 16px;
-    margin-bottom: 16px; 
+    margin-bottom: 16px;
     animation: plate-appear 750ms cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -86,135 +100,237 @@
     align-items: inherit;
     justify-content: space-between;
     flex-wrap: nowrap;
-  }
-  .plate__info { /* ajuster les informations des plats */
+}
+
+// Informations des plats
+.plate__info {
     white-space: nowrap;
     overflow: hidden;
     flex: 1;
-  }
-  .plate__title{
-    overflow: hidden; 
-    text-overflow: ellipsis; // Ajoute les trois points 
-  }
-  
-  .plate__composition { /* composition des plats texte pas en gras */
+}
+
+// Titre des plats
+.plate__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Composition des plats
+.plate__composition {
     font-weight: 300;
-    font-size: 15px; 
-    overflow: hidden; 
-   text-overflow: ellipsis; // Ajoute les trois points 
-  }
-  .plate__price { /* mettre le prix en bas de la carte */
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Prix des plats
+.plate__price {
     align-self: flex-end;
-    margin-left: 10px; 
-  }
-  .plate__confirmation {  /* animation bouton */
+    margin-left: 10px;
+}
+
+// Bouton de confirmation du plat
+.plate__confirmation {
     background-color: #99E2D0;
     color: #FFF;
-    font-size: 20px; 
-    border-top-right-radius: 10px; 
-    border-bottom-right-radius: 11px; 
-    width: 56px; 
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 11px;
+    width: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: -12px -72px -12px 16px;
     transition: margin-right 600ms ease;
-  }
-  .plate:hover {
+}
+
+// Animation au survol du plat
+.plate:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
-  }
-  .plate:hover .plate__confirmation {
+}
+
+.plate:hover .plate__confirmation {
     margin-right: -0.75rem;
-  }
-  
-  .btn--py { /* bouton tel adaptation */
-    padding-left: 50px; 
-    padding-right: 50px; 
-  }
+}
 
- 
+// Adaptation des boutons
+.btn--py {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
-  @media (min-width: 1024px) {
+// Style des icônes Font Awesome
+.fa-regular, .far {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    margin-right: 31px;
+}
+
+// Media queries pour tailles d'écran
+
+// Écran >= 1024px
+@media (min-width: 1024px) {
     .menu__content {
-      max-width: calc(120% - 460px); /* Espace de 240px de chaque côté pour encore plus réduire la largeur */
-      margin: -20px auto 0;
-      overflow: hidden;
-      margin-bottom: 13px;
+        max-width: calc(120% - 460px);
+        margin: -20px auto 0;
+        overflow: hidden;
+        margin-bottom: 13px;
     }
-  
+
     .menu__info {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  
+
     .menu__title {
-      margin-right: 10px;
+        margin-right: 10px;
     }
-  
+
     .plate {
-      overflow: hidden;
-      width: calc(75% - 65px); /* Réduit la largeur pour un espace de 60px de chaque côté */
-      height: auto; /* Permet à la hauteur de s'ajuster automatiquement */
-      margin: 20px auto; /* Ajoute un espace de 20px entre chaque plat */
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #fffefe; /* Optionnel : ajoute un fond clair pour démarquer chaque plat */
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optionnel : ajoute une ombre légère */
+        overflow: hidden;
+        width: calc(75% - 65px);
+        height: auto;
+        margin: 20px auto;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #fffefe;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-    .menu__title { /* style de texte */
-      font-family: "Shrikhand", cursive;
-      font-weight: normal;
-      font-size: 28px; 
-      margin-bottom: 0;
-      margin-left: 1px;
+
+    .menu__title {
+        font-family: "Shrikhand", cursive;
+        font-weight: normal;
+        font-size: 28px;
+        margin-bottom: 0;
+        margin-left: 1px;
     }
-    .underline-title{
-      margin-left: 15%;
+
+    .underline-title {
+        margin-left: 15%;
     }
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+// Écran <= 1024px
+@media (max-width: 1024px) {
     .plate {
-      width: calc(100% - 60px); /* Largeur réduite pour un espace de 30px de chaque côté */
-      height: auto;
-      margin: 10px auto; /* Espace de 10px entre chaque plat pour les écrans plus petits */
-    overflow: hidden;
+        width: calc(100% - 60px);
+        height: auto;
+        margin: 10px auto;
+        overflow: hidden;
     }
+}
+
+// Écran entre 377px et 1023px
+@media (min-width: 377px) and (max-width: 1023px) {
+    .navbar {
+        left: 20px;
+        font-size: 1.5em;
+    }
+
+    .menu__banner {
+        height: 250px;
+    }
+
+    .menu__content {
+        margin-top: -50px;
+        padding: 1rem;
+    }
+
+    .menu__title {
+        font-size: 24px;
+        margin-left: 40%;
+    }
+
+    .underline-title {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .plate {
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 8px;
+    }
+
+    .plate__confirmation {
+        font-size: 18px;
+        width: 50px;
+    }
+
+}
+
+// Média pour infos du menu
+@media (min-width: 377px) and (max-width: 1023px) {
+    .menu__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .menu__title {
+        font-size: 24px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .btn-like {
+        margin-left: 15px;
+    }
+}
+// Animation de défilement des plats
+@keyframes scrollPlates {
+  0% {
+      transform: translateY(50px);   // Plat commence plus bas
+      opacity: 0;                    // Plat invisible au début
   }
-  @media (min-width: 1024px){
-    .footer {
-      background-color: #353535;
-      padding: 20px;
-      color: white;
-      margin-top: -13px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: normal;
+  100% {
+      transform: translateY(0);      // Plat arrive à sa position initiale
+      opacity: 1;                    // Plat devient visible
   }
-  
-  .footer__link {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      justify-content: center;
-      margin-top: 19px;
-      margin-left: 66rem;
-      position: sticky;
-  }
-  
-  .footer__link-item {
-      margin-right: 40px !important; /* Ajoute de l'espace avant "Devenir partenaire" */
-  }
-  
-  .footer-title {
-      margin-top: 30px;
-      text-align: center;
-      order: 1;
-  }
-  
-  }
+}
+
+// Application de l'animation aux plats
+.plate {
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  animation: scrollPlates 0.6s ease-out forwards;  // Animation de défilement
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  opacity: 0;   
+}
+
+// Délais pour faire défiler chaque plat un par un
+.plate:nth-child(1) {
+  animation-delay: 0.2s;  
+}
+
+.plate:nth-child(2) {
+  animation-delay: 0.4s;  
+}
+
+.plate:nth-child(3) {
+  animation-delay: 0.6s;  
+}
+
+.plate:nth-child(4) {
+  animation-delay: 0.8s;  
+}
+
+.plate:nth-child(5) {
+  animation-delay: 1s;  
+}
+
+.plate:nth-child(6) {
+  animation-delay: 1.2s;  
+}
+
+

@@ -1,0 +1,123 @@
+
+
+.loader { //flouter larreire plan et centrer le texte
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Flou de l'arrière-plan */
+
+    animation: fadeOutLoader 7s forwards; /* Animation de disparition du loader complet  */
+
+    .loader__content {
+        text-align: center;
+        color: #fff;
+        font-family: 'Shrikhand', sans-serif;
+        position: relative;
+    }
+
+    .loader__text { // espacement des letre t les metre en ajuscule ...
+        font-size: 80px; 
+        letter-spacing: 10px; /* Espacement des lettres */
+        text-transform: uppercase;
+        color: #000; 
+        position: relative;
+        display: inline-block;
+
+        /* Animation du contour néon */
+        animation: neonGlow 7s ease-in-out infinite;
+    }
+
+    .loader__icon {// potition de licon 
+        font-size: 100px; 
+        color: #fff;
+        animation: neonGlow 7s ease-in-out infinite;
+        margin-top: 20px;
+    }
+
+   
+    @keyframes neonGlow { //ceouleur de fond du texte progresive 
+        0% {
+            text-shadow: 
+                0 0 5px #9356DC, 
+                0 0 10px #9356DC, 
+                0 0 15px #FF79DA, 
+                0 0 20px #FF79DA, 
+                0 0 30px #FF79DA, 
+                0 0 50px #FF79DA, 
+                0 0 75px #FF79DA;
+        }
+        50% {
+            text-shadow: 
+                0 0 10px #9356DC, 
+                0 0 20px #9356DC, 
+                0 0 30px #FF79DA, 
+                0 0 40px #FF79DA, 
+                0 0 60px #FF79DA, 
+                0 0 90px #FF79DA;
+        }
+        100% {
+            text-shadow: 
+                0 0 5px #9356DC, 
+                0 0 10px #9356DC, 
+                0 0 15px #FF79DA, 
+                0 0 20px #FF79DA, 
+                0 0 30px #FF79DA, 
+                0 0 50px #FF79DA, 
+                0 0 75px #FF79DA;
+        }
+    }
+
+   
+    @keyframes fadeOutLoader { // fin de lanimation du loader 
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    /* responsives */
+    @media (max-width: 1024px) {
+        .loader__text {
+            font-size: 60px;
+        }
+
+        .loader__icon {
+            font-size: 80px; 
+        }
+    }
+
+    @media (max-width: 768px) {
+        .loader__text {
+            font-size: 50px; 
+        }
+
+        .loader__icon {
+            font-size: 70px; 
+        }
+    }
+
+    @media (max-width: 480px) {
+        .loader__text {
+            font-size: 40px; 
+        }
+
+        .loader__icon {
+            font-size: 60px; 
+        }
+    }
+}
+
+/*rendre le loader invisible apres lanimation  */
+body.loaded .loader {
+    display: none;
+}  

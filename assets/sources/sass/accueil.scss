@@ -106,7 +106,7 @@ text-decoration: none;
 /* Section cards */
 .cards {
   background-color: #F6F6F6;
-  margin-top: 47px;
+  margin-top: 78px;
   padding-bottom: 55px;/*metre 55px despace evant le footer*/
   
 }
@@ -189,7 +189,7 @@ text-decoration: none;
   }
 
   .etape {
-    width: 385px !important;
+    width: 25% !important;
     height: 72.37px;
     margin: 20px;
     padding: 12px;
@@ -243,9 +243,9 @@ text-decoration: none;
   margin-left: 3%;
 }
   .etape {
-    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
-    max-width: none; /* Supprime la limite de largeur */
-    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
+    width: calc(100% - 50px); 
+    max-width: none; 
+    margin: 10px auto 20px; 
     padding: 12px;
     background-color: #F6F6F6;
     border-radius: 20px;
@@ -258,19 +258,19 @@ text-decoration: none;
 
   .cards > div {
     display: flex;
-    flex-direction: column; /* Les cartes en une colonne */
-    align-items: center; /* Centre les cartes horizontalement */
-    gap: 20px; /* Espace de 20px entre les cartes */
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
   }
 
   .card {
-    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
-    margin: 0 auto; /* Centrage horizontal */
-    max-width: none; /* Supprime la limite de largeur */
+    width: calc(100% - 50px); 
+    margin: 0 auto; 
+    max-width: none; 
   }
 
   .card__img {
-    height: 200px !important; /* Hauteur pour l'affichage tablette */
+    height: 200px !important; 
   }
   
 }
@@ -283,30 +283,30 @@ text-decoration: none;
 
   /* Style pour les étapes */
   .etape {
-    width: calc(100% - 50px); /* Largeur de l'écran moins 25px de chaque côté */
-    max-width: none; /* Supprime toute limite de largeur */
-    margin: 10px auto 20px; /* Centrage horizontal avec espacement de 20px entre les éléments */
-    padding: 10px; /* Ajustement pour réduire l'espace */
+    width: calc(100% - 50px); 
+    max-width: none; 
+    margin: 10px auto 20px; 
+    padding: 10px; 
     background-color: #F6F6F6;
     border-radius: 20px;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombre plus légère */
-    font-size: 13px; /* Taille de texte plus petite */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    font-size: 13px; 
     text-align: center;
   }
 
   /* Configuration des cartes */
 
   .card__img {
-    height: 200px !important; /* Hauteur d'image ajustée pour écrans moyens */
-    width: 100%; /* Assure que l’image occupe toute la largeur de la carte */
-    object-fit: cover; /* Ajuste l'image pour éviter les déformations */
+    height: 200px !important; 
+    width: 100%; 
+    object-fit: cover; 
   }
 
   /* Autres éléments ou sections pour cet écran */
   .footer {
     padding: 15px;
-    text-align: center; /* Centrage du contenu pour mobile */
+    text-align: center; 
   }
 }
 
