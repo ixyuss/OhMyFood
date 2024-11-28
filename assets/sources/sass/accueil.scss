@@ -1,67 +1,76 @@
-
 @import "global";
 @import "loader";
+@import "footer";
+@import "btn-like";
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;}
+  text-decoration: none;
+}
+
 :root {
   --primary-color: #9356DC;    /* Couleur primaire */
   --secondary-color: #FF79DA;  /* Couleur secondaire */
   --tertiary-color: #99E2D0;   /* Couleur tertiaire */
+  --light-gray: #F6F6F6;       /* Gris clair pour les sections */
+  --light-purple: #F5EDFF;     /* Violet clair pour hover */
+  --green: #008766;            /* Couleur pour les nouveaux éléments */
 }
+
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
-a {  /* texte en noir sans style */
-color: black; 
-text-decoration: none; 
+a {
+  color: black;
+  text-decoration: none;
 }
-
-/* Header mobile */
 
 /* Section restaurant */
 .restaurant {
-  padding: 0 0 50px; 
-  background-color: #F6F6F6;
+  padding: 0 0 50px;
+  background-color: var(--light-gray);
   text-align: center;
-  .restaurant__address { /*barre de recherche lieux */
-    background-color: #EAEAEA;
+  
+  .restaurant__address {
+    background-color: var(--light-gray);
     font-style: normal;
     font-weight: 500;
-    padding: 16px; 
-    margin-bottom: 35px; 
+    padding: 16px;
+    margin-bottom: 35px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   }
-  .restaurant__address i { /*barre de recherche lieux icon */
-    background-color: #EAEAEA;
-    margin-right: 15px; 
+
+  .restaurant__address i {
+    background-color: var(--light-gray);
+    margin-right: 15px;
   }
+
   .restaurant h1 {
-    font-size: 24px; 
+    font-size: 24px;
     font-weight: 700;
-    margin-bottom: 20px; 
-    padding: 0 40px; 
+    margin-bottom: 20px;
+    padding: 0 40px;
   }
+
   .restaurant__description {
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 300;
-    margin-bottom: 30px; 
-    padding: 0 20px; 
+    margin-bottom: 30px;
+    padding: 0 20px;
   }
- 
 }
+
 .fonction {
   margin-top: 40px;
-  margin-left: 20px !important; // Ajustez la valeur pour le décalage souhaité
+  margin-left: 20px !important;
   margin-bottom: 30px;
 }
 
-.etape { /*etape mobolefirst */
-  
+.etape {
   padding: 25px 10px;
   margin: 16px 0 20px 13px;
   border-radius: 24px;
@@ -72,22 +81,25 @@ text-decoration: none;
   align-items: center;
   justify-content: flex-start;
   width: 322.49px;
-  height: 72.38px; 
+  height: 72.38px;
   left: 13px;
+
   &:hover {
-    background-color: #F5EDFF;
+    background-color: var(--light-purple);
   }
+
   .icon-mobil {
     margin: 0 20px 0 26px;
     font-size: 20px;
     color: #7E7E7E;
   }
+
   .text-gras {
     font-weight: 900;
   }
 
   .etape-1 {
-    background: #9356DC;
+    background: var(--primary-color);
     color: #FFF;
     width: 26px;
     height: 26px;
@@ -100,24 +112,24 @@ text-decoration: none;
   }
 
   .step:hover i {
-    color: #9356DC;
+    color: var(--primary-color);
   }
 }
+
 /* Section cards */
 .cards {
-  background-color: #F6F6F6;
+  background-color: var(--light-gray);
   margin-top: 78px;
-  padding-bottom: 55px;/*metre 55px despace evant le footer*/
-  
+  padding-bottom: 55px;
 }
 
-.rs{
+.rs {
   margin-left: 19px;
- padding-top: 40px;
- padding-bottom: 25px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
-.card{
 
+.card {
   margin-bottom: 16px;
   margin-left: 16px;
   margin-right: 16px;
@@ -130,54 +142,56 @@ text-decoration: none;
   justify-content: normal;
   flex-wrap: nowrap;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  
+
   .card__img {
     width: 100%;
     height: 152px;
     object-fit: cover;
-    border-top-left-radius: 16px; 
-    border-top-right-radius: 16px; 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
   }
+
   .card__body {
-    padding: 10px; 
+    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
   }
+
   .card__title {
-    font-size: 18px; 
+    font-size: 18px;
     font-weight: 900;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
   }
+
   .card__lieux {
     font-weight: 300;
     text-transform: capitalize;
   }
+
   .card__new {
     padding: 8px 12px;
-    background-color: #99E2D0;
-    color: #008766;
-    font-size: 14px; 
+    background-color: var(--tertiary-color);
+    color: var(--green);
+    font-size: 14px;
     position: absolute;
     top: 15px;
     right: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
-  
+
   .card:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
   }
-  
-  
 }
 
 /* Styles pour écran de bureau (min-width: 1024px) */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 12.4% !important; /* Ajuste la marge de la fonction */
-    margin-bottom: -25px; /* Ajuste la marge du bas */
+    margin-left: 12.4% !important;
+    margin-bottom: -25px;
   }
 
   .fonctionement ol {
@@ -193,7 +207,7 @@ text-decoration: none;
     height: 72.37px;
     margin: 20px;
     padding: 12px;
-    background-color: #F6F6F6;
+    background-color: var(--light-gray);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -205,7 +219,7 @@ text-decoration: none;
   .rs {
     margin-left: 12.4%;
     height: 0px;
-    margin-top: -30px;
+    margin-top: -50px;
     margin-bottom: 28px;
   }
 
@@ -218,7 +232,7 @@ text-decoration: none;
   }
 
   .card {
-    flex: 0 0 calc(40% - 65px); /* Ajuste la taille des cartes pour deux colonnes */
+    flex: 0 0 calc(40% - 65px);
     margin: 20px;
     max-width: 900px !important;
     min-height: 1px;
@@ -229,8 +243,8 @@ text-decoration: none;
     width: 100%;
     height: 230px !important;
     object-fit: cover;
-    border-top-left-radius: 16px; 
-    border-top-right-radius: 16px; 
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
   }
 }
 
@@ -239,15 +253,17 @@ text-decoration: none;
     margin-left: 3% !important;
     margin-bottom: 10px;
   }
-.rs{
-  margin-left: 3%;
-}
+
+  .rs {
+    margin-left: 3%;
+  }
+
   .etape {
-    width: calc(100% - 50px); 
-    max-width: none; 
-    margin: 10px auto 20px; 
+    width: calc(100% - 50px);
+    max-width: none;
+    margin: 10px auto 20px;
     padding: 12px;
-    background-color: #F6F6F6;
+    background-color: var(--light-gray);
     border-radius: 20px;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -258,55 +274,49 @@ text-decoration: none;
 
   .cards > div {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 20px; 
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
   .card {
-    width: calc(100% - 50px); 
-    margin: 0 auto; 
-    max-width: none; 
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    max-width: none;
   }
 
   .card__img {
-    height: 200px !important; 
+    height: 200px !important;
   }
-  
 }
+
 @media (min-width: 377px) and (max-width: 767px) {
-  /* Ajustement des sections générales */
   .fonction {
-    margin-left: 5%; /* Réduction de la marge pour écrans plus petits */
+    margin-left: 5%;
     margin-bottom: 15px;
   }
 
-  /* Style pour les étapes */
   .etape {
-    width: calc(100% - 50px); 
-    max-width: none; 
-    margin: 10px auto 20px; 
-    padding: 10px; 
-    background-color: #F6F6F6;
+    width: calc(100% - 50px);
+    max-width: none;
+    margin: 10px auto 20px;
+    padding: 10px;
+    background-color: var(--light-gray);
     border-radius: 20px;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
-    font-size: 13px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 13px;
     text-align: center;
   }
 
-  /* Configuration des cartes */
-
   .card__img {
-    height: 200px !important; 
-    width: 100%; 
-    object-fit: cover; 
+    height: 200px !important;
+    width: 100%;
+    object-fit: cover;
   }
 
-  /* Autres éléments ou sections pour cet écran */
   .footer {
     padding: 15px;
-    text-align: center; 
+    text-align: center;
   }
 }
-

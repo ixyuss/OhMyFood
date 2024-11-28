@@ -1,21 +1,30 @@
 @import "global";
+@import "footer";
+@import "btn-like-restaurant";
 
-// Navbar positionnement
-.navbar {
+//navbar
+.navbar{
     position: absolute;
     left: 30px;
-    top: 17%;
-    font-size: 1.9em;
+    top: 17px;
+    font-size: 1,9em;
 }
-
-// Icône de la navbar en gris
+// Icône de la navbar en gris fleche retour page dacceuil
 .header .navbar a i {
     color: #808080 !important;
 }
-
 // Suppression des marges du menu
 .menu {
     padding: 0;
+}
+
+// Bannière du menu ajustement de liamge mennu
+.menu__banner {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 // Bannière du menu
@@ -165,7 +174,6 @@
     font-weight: 400;
     margin-right: 31px;
 }
-
 // Media queries pour tailles d'écran
 
 // Écran >= 1024px
@@ -210,6 +218,7 @@
         margin-left: 15%;
     }
 }
+
 
 // Écran <= 1024px
 @media (max-width: 1024px) {
@@ -261,7 +270,6 @@
 
 }
 
-// Média pour infos du menu
 @media (min-width: 377px) and (max-width: 1023px) {
     .menu__info {
         display: flex;
@@ -279,58 +287,67 @@
     .btn-like {
         margin-left: 15px;
     }
-}
+} // fin du responsive
 // Animation de défilement des plats
 @keyframes scrollPlates {
-  0% {
-      transform: translateY(50px);   // Plat commence plus bas
-      opacity: 0;                    // Plat invisible au début
+    0% {
+        transform: translateY(50px);   // Plat commence plus bas
+        opacity: 0;                    // Plat invisible au début
+    }
+    100% {
+        transform: translateY(0);      // Plat arrive à sa position initiale
+        opacity: 1;                    // Plat devient visible
+    }
   }
-  100% {
-      transform: translateY(0);      // Plat arrive à sa position initiale
-      opacity: 1;                    // Plat devient visible
+  
+  // Application de l'animation aux plats
+  .plate {
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    animation: scrollPlates 0.6s ease-out forwards;  // Animation de défilement
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    opacity: 0;   
   }
-}
-
-// Application de l'animation aux plats
-.plate {
-  padding: 12px;
-  background: #ffffff;
-  border-radius: 16px;
-  margin-bottom: 16px;
-  animation: scrollPlates 0.6s ease-out forwards;  // Animation de défilement
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: row;
-  align-items: inherit;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  opacity: 0;   
-}
-
-// Délais pour faire défiler chaque plat un par un
-.plate:nth-child(1) {
-  animation-delay: 0.2s;  
-}
-
-.plate:nth-child(2) {
-  animation-delay: 0.4s;  
-}
-
-.plate:nth-child(3) {
-  animation-delay: 0.6s;  
-}
-
-.plate:nth-child(4) {
-  animation-delay: 0.8s;  
-}
-
-.plate:nth-child(5) {
-  animation-delay: 1s;  
-}
-
-.plate:nth-child(6) {
-  animation-delay: 1.2s;  
-}
-
-
+  
+  // Délais pour faire défiler chaque plat un par un
+  .plate:nth-child(1) {
+    animation-delay: 0.2s;  
+  }
+  
+  .plate:nth-child(2) {
+    animation-delay: 0.4s;  
+  }
+  
+  .plate:nth-child(3) {
+    animation-delay: 0.6s;  
+  }
+  
+  .plate:nth-child(4) {
+    animation-delay: 0.8s;  
+  }
+  
+  .plate:nth-child(5) {
+    animation-delay: 1s;  
+  }
+  
+  .plate:nth-child(6) {
+    animation-delay: 1.2s;  
+  }
+  
+  @media (max-width: 375px){
+    .heart i{
+        margin-left: -90px;
+        margin-top: -2px
+    }
+    .menu__title{
+     margin-top: 31px;
+     font-size: 24px;
+    }
+  }

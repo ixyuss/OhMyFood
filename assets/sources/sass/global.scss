@@ -88,151 +88,15 @@ a {
   }
 }
 
-.btn-like {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  transition: transform 0.3s ease;
-  
-  &:hover {
-    transform: scale(1.2); /* Agrandissement au survol */
-    
-    .icon-heart {
-      color: #9356DC; /* Change la couleur de l'icône au survol */
-    }
-  }
-}
-
-/* Icon Button */
-.btn-like i {
-  transition: color 0.3s ease; /* Transition douce sur la couleur de l'icône */
-}
-
-.btn-like:hover i {
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da); /* Effet de dégradé au survol sur l'icône */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  transition: background 2s ease, opacity 0.3s ease, background-size 2s ease;
-}
-
 /* Icon Mobil */
 .icon-mobil {
   color: #9356DC; 
 }
 
 .etape:hover .icon-mobil {
-  color: #FF79DA; 
+  color: #9356DC; 
 }
 
 .etape:last-child .icon-mobil {
   color: #9356DC; /* Restaure la couleur par défaut sur le dernier élément */
-}
-
-/* Footer */
-.footer-title {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 20px; 
-}
-
-.footer {
-  background-color: #353535;
-  padding: 20px;
-  color: white;
-  margin-top: -13px; 
-}
-
-.footer__link {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espacement entre les éléments du footer */
-  
-  li {
-    margin: 0;
-  }
-
-  a {
-    color: white;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline; /* Décoration de texte au survol des liens */
-    }
-  }
-}
-
-
-@media (min-width: 768px){
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 15px; /* Espacement réduit entre les liens */
-  }
-}
-
-@media (min-width: 1444px) {
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 20px; /* Espacement réduit entre les liens */
-    order: 1;
-    margin-left: 47%;
-    margin-top: -45px;
-    margin-bottom: 19px;
-  }
-
-  .footer-title {
-    order: 2;
-    margin-left: 87%;
-    margin-top: 12px;
-  }
-
-  .footer__link-fa {
-    margin-right: 50px !important; /* Positionnement de certains éléments avec priorité */
-  }
-}
-
-
-@media (max-width: 1440px) and (min-width: 769px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centre le contenu entre 769px et 1440px */
-  }
-
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté */
-  }
-
-  .footer__link-fa {
-    margin-top: -10px; /* Ajuste la position du footer */
-  }
-}
-
-
-@media (max-width: 1625px) and (min-width: 1445px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centrer le contenu dans cet intervalle de taille */
-  }
-
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté entre les liens */
-    margin-top: -12px; /* Ajuste la position du footer */
-  }
 }

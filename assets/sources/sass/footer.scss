@@ -1,0 +1,91 @@
+
+footer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap:16px;
+    background-color: #353535;
+    color: white;
+    padding: 22px 25px;
+    margin-top: -13px;
+    .omffooter{
+      margin-bottom: -11px;
+    }
+
+    @media screen and (min-width:1024px){
+        flex-flow: row-reverse;
+        padding: 30px 25px;
+        gap:90px;
+    }
+  
+    & h3{
+       
+        font-size: 1.125rem;
+        font-family: "Shrikhand", serif;
+    }
+   
+    .footer-contenair{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap:7px;
+        margin-bottom: -9px;
+    
+        @media screen and (min-width:1024px){
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap:15px;
+        }
+    }
+    & a{
+        display: flex;
+        gap:11px ;
+        align-items: flex-start;
+        font-weight: 500;
+        color: white;
+    }
+  
+    & i{
+        width: 11px;
+        height: 13px;
+        font-size:14px ;
+  
+    }
+    
+    @media (max-width: 1023px) and (min-width: 580px) {
+      flex-flow: row;  // Garder les éléments sur une seule ligne
+      padding: 30px 25px;  // Conserver le même padding que pour la version desktop
+      gap: 90px;  // Garder le même écart entre les éléments
+    
+      & h3 {
+        font-size: clamp(0.875rem, 3vw, 1.125rem);  // Utiliser 'clamp' pour ajuster la taille du texte
+        font-family: "Shrikhand", serif;
+        order: 2;
+      }
+    
+      .footer-contenair {
+        display: flex;
+        flex-direction: row;  // Garder tous les éléments sur une seule ligne
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 15px;
+        margin-bottom: -9px;
+      }
+    
+      & a {
+        display: flex;
+        gap: 11px;
+        align-items: flex-start;
+        font-weight: 500;
+        color: white;
+        order: 1;
+      }
+    
+      & i {
+        width: 11px;
+        height: 13px;
+        font-size: 14px;
+      }
+    }
+  }  

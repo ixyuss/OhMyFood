@@ -13,7 +13,7 @@
     z-index: 1000;
     backdrop-filter: blur(5px); /* Flou de l'arrière-plan */
 
-    animation: fadeOutLoader 7s forwards; /* Animation de disparition du loader complet  */
+    animation: fadeOutLoader 2s forwards; /* Animation de disparition du loader complet  */
 
     .loader__content {
         text-align: center;
@@ -31,13 +31,13 @@
         display: inline-block;
 
         /* Animation du contour néon */
-        animation: neonGlow 7s ease-in-out infinite;
+        animation: neonGlow 2s ease-in-out infinite;
     }
 
     .loader__icon {// potition de licon 
         font-size: 100px; 
         color: #fff;
-        animation: neonGlow 7s ease-in-out infinite;
+        animation: neonGlow 2s ease-in-out infinite;
         margin-top: 20px;
     }
 

@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 /* Global Styles */
 * {
   margin: 0;
@@ -86,138 +86,19 @@ a {
   opacity: 1; /* Affiche l'effet de survol */
 }
 
-.btn-like {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  transition: transform 0.3s ease;
-}
-.btn-like:hover {
-  transform: scale(1.2); /* Agrandissement au survol */
-}
-.btn-like:hover .icon-heart {
-  color: #9356DC; /* Change la couleur de l'icône au survol */
-}
-
-/* Icon Button */
-.btn-like i {
-  transition: color 0.3s ease; /* Transition douce sur la couleur de l'icône */
-}
-
-.btn-like:hover i {
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da); /* Effet de dégradé au survol sur l'icône */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  transition: background 2s ease, opacity 0.3s ease, background-size 2s ease;
-}
-
 /* Icon Mobil */
 .icon-mobil {
   color: #9356DC;
 }
 
 .etape:hover .icon-mobil {
-  color: #FF79DA;
+  color: #9356DC;
 }
 
 .etape:last-child .icon-mobil {
   color: #9356DC; /* Restaure la couleur par défaut sur le dernier élément */
 }
 
-/* Footer */
-.footer-title {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 20px;
-}
-
-.footer {
-  background-color: #353535;
-  padding: 20px;
-  color: white;
-  margin-top: -13px;
-}
-
-.footer__link {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px; /* Espacement entre les éléments du footer */
-}
-.footer__link li {
-  margin: 0;
-}
-.footer__link a {
-  color: white;
-  text-decoration: none;
-}
-.footer__link a:hover {
-  text-decoration: underline; /* Décoration de texte au survol des liens */
-}
-
-@media (min-width: 768px) {
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 15px; /* Espacement réduit entre les liens */
-  }
-}
-@media (min-width: 1444px) {
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 20px; /* Espacement réduit entre les liens */
-    order: 1;
-    margin-left: 47%;
-    margin-top: -45px;
-    margin-bottom: 19px;
-  }
-  .footer-title {
-    order: 2;
-    margin-left: 87%;
-    margin-top: 12px;
-  }
-  .footer__link-fa {
-    margin-right: 50px !important; /* Positionnement de certains éléments avec priorité */
-  }
-}
-@media (max-width: 1440px) and (min-width: 769px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centre le contenu entre 769px et 1440px */
-  }
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté */
-  }
-  .footer__link-fa {
-    margin-top: -10px; /* Ajuste la position du footer */
-  }
-}
-@media (max-width: 1625px) and (min-width: 1445px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centrer le contenu dans cet intervalle de taille */
-  }
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté entre les liens */
-    margin-top: -12px; /* Ajuste la position du footer */
-  }
-}
 .loader {
   position: fixed;
   top: 0;
@@ -305,6 +186,112 @@ body.loaded .loader {
   display: none;
 }
 
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #353535;
+  color: white;
+  padding: 22px 25px;
+  margin-top: -13px;
+}
+footer .omffooter {
+  margin-bottom: -11px;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-flow: row-reverse;
+    padding: 30px 25px;
+    gap: 90px;
+  }
+}
+footer h3 {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", serif;
+}
+footer .footer-contenair {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: -9px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-contenair {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+  }
+}
+footer a {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-weight: 500;
+  color: white;
+}
+footer i {
+  width: 11px;
+  height: 13px;
+  font-size: 14px;
+}
+@media (max-width: 1023px) and (min-width: 580px) {
+  footer {
+    flex-flow: row;
+    padding: 30px 25px;
+    gap: 90px;
+  }
+  footer h3 {
+    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    font-family: "Shrikhand", serif;
+    order: 2;
+  }
+  footer .footer-contenair {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: -9px;
+  }
+  footer a {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    font-weight: 500;
+    color: white;
+    order: 1;
+  }
+  footer i {
+    width: 11px;
+    height: 13px;
+    font-size: 14px;
+  }
+}
+
+.heart i {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  right: 25px;
+  margin-top: -16px;
+}
+
+.my-heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 2s;
+}
+.my-heart-full:hover {
+  opacity: 1;
+  color: #9356DC;
+  background-image: linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  color: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -316,6 +303,9 @@ body.loaded .loader {
   --primary-color: #9356DC; /* Couleur primaire */
   --secondary-color: #FF79DA; /* Couleur secondaire */
   --tertiary-color: #99E2D0; /* Couleur tertiaire */
+  --light-gray: #F6F6F6; /* Gris clair pour les sections */
+  --light-purple: #F5EDFF; /* Violet clair pour hover */
+  --green: #008766; /* Couleur pour les nouveaux éléments */
 }
 
 body {
@@ -323,28 +313,27 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a { /* texte en noir sans style */
+a {
   color: black;
   text-decoration: none;
 }
 
-/* Header mobile */
 /* Section restaurant */
 .restaurant {
   padding: 0 0 50px;
-  background-color: #F6F6F6;
+  background-color: var(--light-gray);
   text-align: center;
 }
-.restaurant .restaurant__address { /*barre de recherche lieux */
-  background-color: #EAEAEA;
+.restaurant .restaurant__address {
+  background-color: var(--light-gray);
   font-style: normal;
   font-weight: 500;
   padding: 16px;
   margin-bottom: 35px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-.restaurant .restaurant__address i { /*barre de recherche lieux icon */
-  background-color: #EAEAEA;
+.restaurant .restaurant__address i {
+  background-color: var(--light-gray);
   margin-right: 15px;
 }
 .restaurant .restaurant h1 {
@@ -366,7 +355,7 @@ a { /* texte en noir sans style */
   margin-bottom: 30px;
 }
 
-.etape { /*etape mobolefirst */
+.etape {
   padding: 25px 10px;
   margin: 16px 0 20px 13px;
   border-radius: 24px;
@@ -381,7 +370,7 @@ a { /* texte en noir sans style */
   left: 13px;
 }
 .etape:hover {
-  background-color: #F5EDFF;
+  background-color: var(--light-purple);
 }
 .etape .icon-mobil {
   margin: 0 20px 0 26px;
@@ -392,7 +381,7 @@ a { /* texte en noir sans style */
   font-weight: 900;
 }
 .etape .etape-1 {
-  background: #9356DC;
+  background: var(--primary-color);
   color: #FFF;
   width: 26px;
   height: 26px;
@@ -404,14 +393,14 @@ a { /* texte en noir sans style */
   left: -13px;
 }
 .etape .step:hover i {
-  color: #9356DC;
+  color: var(--primary-color);
 }
 
 /* Section cards */
 .cards {
-  background-color: #F6F6F6;
+  background-color: var(--light-gray);
   margin-top: 78px;
-  padding-bottom: 55px; /*metre 55px despace evant le footer*/
+  padding-bottom: 55px;
 }
 
 .rs {
@@ -460,8 +449,8 @@ a { /* texte en noir sans style */
 }
 .card .card__new {
   padding: 8px 12px;
-  background-color: #99E2D0;
-  color: #008766;
+  background-color: var(--tertiary-color);
+  color: var(--green);
   font-size: 14px;
   position: absolute;
   top: 15px;
@@ -475,8 +464,8 @@ a { /* texte en noir sans style */
 /* Styles pour écran de bureau (min-width: 1024px) */
 @media (min-width: 1024px) {
   .fonction {
-    margin-left: 12.4% !important; /* Ajuste la marge de la fonction */
-    margin-bottom: -25px; /* Ajuste la marge du bas */
+    margin-left: 12.4% !important;
+    margin-bottom: -25px;
   }
   .fonctionement ol {
     display: flex;
@@ -490,7 +479,7 @@ a { /* texte en noir sans style */
     height: 72.37px;
     margin: 20px;
     padding: 12px;
-    background-color: #F6F6F6;
+    background-color: var(--light-gray);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -501,7 +490,7 @@ a { /* texte en noir sans style */
   .rs {
     margin-left: 12.4%;
     height: 0px;
-    margin-top: -30px;
+    margin-top: -50px;
     margin-bottom: 28px;
   }
   .cards > div {
@@ -512,7 +501,7 @@ a { /* texte en noir sans style */
     margin: 0 auto;
   }
   .card {
-    flex: 0 0 calc(40% - 65px); /* Ajuste la taille des cartes pour deux colonnes */
+    flex: 0 0 calc(40% - 65px);
     margin: 20px;
     max-width: 900px !important;
     min-height: 1px;
@@ -539,7 +528,7 @@ a { /* texte en noir sans style */
     max-width: none;
     margin: 10px auto 20px;
     padding: 12px;
-    background-color: #F6F6F6;
+    background-color: var(--light-gray);
     border-radius: 20px;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
@@ -563,31 +552,27 @@ a { /* texte en noir sans style */
   }
 }
 @media (min-width: 377px) and (max-width: 767px) {
-  /* Ajustement des sections générales */
   .fonction {
-    margin-left: 5%; /* Réduction de la marge pour écrans plus petits */
+    margin-left: 5%;
     margin-bottom: 15px;
   }
-  /* Style pour les étapes */
   .etape {
     width: calc(100% - 50px);
     max-width: none;
     margin: 10px auto 20px;
     padding: 10px;
-    background-color: #F6F6F6;
+    background-color: var(--light-gray);
     border-radius: 20px;
     align-items: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     font-size: 13px;
     text-align: center;
   }
-  /* Configuration des cartes */
   .card__img {
     height: 200px !important;
     width: 100%;
     object-fit: cover;
   }
-  /* Autres éléments ou sections pour cet écran */
   .footer {
     padding: 15px;
     text-align: center;

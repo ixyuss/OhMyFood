@@ -4,21 +4,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none; /* Réinitialisation des marges, des bordures et de la décoration des liens */
+  text-decoration: none;
 }
 
 .fa-utensils {
-  padding: 0px 2px 0px 4px; /* Ajoute un petit espacement autour de l'icône */
+  padding: 0px 2px 0px 4px;
 }
 
 body {
   height: 100%;
-  font-family: "Roboto", sans-serif; /* Définit une police de caractères pour tout le corps */
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   color: black;
-  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  text-decoration: none;
 }
 
 /* Header */
@@ -30,12 +30,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Crée une ombre sous le header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   max-width: 150px;
-  height: auto; /* Redimensionne le logo sans déformer son ratio */
+  height: auto;
 }
 
 /* Restaurant Address */
@@ -45,13 +45,13 @@ a {
   background-color: transparent;
   color: #000;
   font-size: 12px;
-  font-weight: 700; /* Style des champs de texte sans bordure et avec une taille de police spécifique */
+  font-weight: 700;
 }
 
 /* Etape */
 .etape {
   background-color: #F6F6F6;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Ombre autour des éléments */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease; /* Transition douce sur la couleur de fond */
 }
 
@@ -74,158 +74,141 @@ a {
   bottom: 0;
   left: 0;
   border-radius: 32px;
-  background: linear-gradient(180deg, #ff88de 0%, #a16be0 100%); /* Effet de fond en dégradé au survol */
+  background: linear-gradient(180deg, #ff88de 0%, #a16be0 100%);
   opacity: 0;
   z-index: -1;
   transition: opacity 0.3s ease;
 }
 .btn:hover {
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
 }
 .btn:hover:after {
   opacity: 1; /* Affiche l'effet de survol */
 }
 
-.btn-like {
-  position: relative;
-  border: none;
-  background: transparent;
-  padding: 10px;
-  cursor: pointer;
-  font-size: 30px;
-  transition: transform 0.3s ease;
-}
-.btn-like:hover {
-  transform: scale(1.2); /* Agrandissement au survol */
-}
-.btn-like:hover .icon-heart {
-  color: #9356DC; /* Change la couleur de l'icône au survol */
-}
-
-/* Icon Button */
-.btn-like i {
-  transition: color 0.3s ease; /* Transition douce sur la couleur de l'icône */
-}
-
-.btn-like:hover i {
-  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da); /* Effet de dégradé au survol sur l'icône */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  transition: background 2s ease, opacity 0.3s ease, background-size 2s ease;
-}
-
 /* Icon Mobil */
 .icon-mobil {
-  color: #9356DC; /* Définit la couleur par défaut des icônes mobiles */
+  color: #9356DC;
 }
 
 .etape:hover .icon-mobil {
-  color: #FF79DA; /* Change la couleur des icônes mobiles au survol de l'étape */
+  color: #9356DC;
 }
 
 .etape:last-child .icon-mobil {
   color: #9356DC; /* Restaure la couleur par défaut sur le dernier élément */
 }
 
-/* Footer */
-.footer-title {
-  font-family: "Shrikhand", cursive;
-  margin-bottom: 20px; /* Applique une marge au bas du titre du footer */
-}
-
-.footer {
-  background-color: #353535;
-  padding: 20px;
-  color: white;
-  margin-top: -13px; /* Ajoute un petit espacement négatif pour ajuster la position */
-}
-
-.footer__link {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+footer {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  gap: 10px; /* Espacement entre les éléments du footer */
-}
-.footer__link li {
-  margin: 0;
-}
-.footer__link a {
+  gap: 16px;
+  background-color: #353535;
   color: white;
-  text-decoration: none;
+  padding: 22px 25px;
+  margin-top: -13px;
 }
-.footer__link a:hover {
-  text-decoration: underline; /* Décoration de texte au survol des liens */
+footer .omffooter {
+  margin-bottom: -11px;
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    flex-flow: row-reverse;
+    padding: 30px 25px;
+    gap: 90px;
+  }
+}
+footer h3 {
+  font-size: 1.125rem;
+  font-family: "Shrikhand", serif;
+}
+footer .footer-contenair {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: -9px;
+}
+@media screen and (min-width: 1024px) {
+  footer .footer-contenair {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+  }
+}
+footer a {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+  font-weight: 500;
+  color: white;
+}
+footer i {
+  width: 11px;
+  height: 13px;
+  font-size: 14px;
+}
+@media (max-width: 1023px) and (min-width: 580px) {
+  footer {
+    flex-flow: row;
+    padding: 30px 25px;
+    gap: 90px;
+  }
+  footer h3 {
+    font-size: clamp(0.875rem, 3vw, 1.125rem);
+    font-family: "Shrikhand", serif;
+    order: 2;
+  }
+  footer .footer-contenair {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: -9px;
+  }
+  footer a {
+    display: flex;
+    gap: 11px;
+    align-items: flex-start;
+    font-weight: 500;
+    color: white;
+    order: 1;
+  }
+  footer i {
+    width: 11px;
+    height: 13px;
+    font-size: 14px;
+  }
 }
 
-/* Responsive for tablet and desktop */
-@media (min-width: 768px) {
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 15px; /* Espacement réduit entre les liens */
-  }
+.heart i {
+  position: absolute;
+  cursor: pointer;
+  font-size: 30px;
+  margin-top: -16px;
 }
-@media (min-width: 1444px) {
-  .footer__link {
-    flex-direction: row;
-    justify-content: flex-start; /* Aligne les liens à gauche */
-    gap: 20px; /* Espacement réduit entre les liens */
-    order: 1;
-    margin-left: 47%;
-    margin-top: -45px;
-    margin-bottom: 19px;
-  }
-  .footer-title {
-    order: 2;
-    margin-left: 87%;
-    margin-top: 12px;
-  }
-  .footer__link-fa {
-    margin-right: 50px !important; /* Positionnement de certains éléments avec priorité */
-  }
+
+.my-heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
 }
-/* Center content between 769px and 1440px */
-@media (max-width: 1440px) and (min-width: 769px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centre le contenu entre 769px et 1440px */
-  }
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté */
-  }
-  .footer__link-fa {
-    margin-top: -10px; /* Ajuste la position du footer */
-  }
+.my-heart-full:hover {
+  opacity: 1;
+  color: #9356DC;
+  background-image: linear-gradient(#9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  background-clip: text;
+  color: transparent;
 }
-/* Keep content centered between 1445px and 1625px */
-@media (max-width: 1625px) and (min-width: 1445px) {
-  .footer__link,
-  .footer-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 0;
-    margin-right: 0; /* Centrer le contenu dans cet intervalle de taille */
-  }
-  .footer__link {
-    flex-direction: row;
-    gap: 20px; /* Espacement ajusté entre les liens */
-    margin-top: -12px; /* Ajuste la position du footer */
-  }
-}
+
 .navbar {
   position: absolute;
   left: 30px;
-  top: 17%;
-  font-size: 1.9em;
+  top: 17px;
+  font-size: 1, 9em;
 }
 
 .header .navbar a i {
@@ -234,6 +217,14 @@ a {
 
 .menu {
   padding: 0;
+}
+
+.menu__banner {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
 }
 
 .menu__banner {
@@ -506,6 +497,17 @@ a {
 
 .plate:nth-child(6) {
   animation-delay: 1.2s;
+}
+
+@media (max-width: 375px) {
+  .heart i {
+    margin-left: -90px;
+    margin-top: -2px;
+  }
+  .menu__title {
+    margin-top: 31px;
+    font-size: 24px;
+  }
 }
 
 /*# sourceMappingURL=restaurant.css.map */
